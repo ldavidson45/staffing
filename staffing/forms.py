@@ -28,4 +28,4 @@ class RoleTypeForm(forms.ModelForm):
 class EmployeeForm(forms.ModelForm):
     class Meta:
         model = Employee
-        fields = ('name', 'role')
+        fields = ('name', 'role', 'status')
