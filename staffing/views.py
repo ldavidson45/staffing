@@ -4,7 +4,8 @@ from django.contrib.auth import login, authenticate
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib import messages
-from .models import Company, Profile, Role_Type, Employee
+from .models import Company, Profile, Role_Type, Employee, Role_Log
+from .script import get_employee_roles
 # Create your views here.
 
 def sign_up(request):
@@ -77,3 +78,8 @@ def edit_role_log(request, pk):
     else: 
         form = RoleLogForm(request.POST)
     return render(request, 'role_log_edit.html', {'form': form, 'employee': employee})
+
+def employee_detail(request, pk):
+    employee = Employee.objects.get(pk=pk)
+    roles = get_employee_roles(employee)
+    return render(request, 'employee_detail.html', {'roles': role, 'employee': employee})
