@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'staffing_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'staffing',
-        'USER': 'liz',
-        'PASSWORD': 'virginia',
-        'HOST': 'localhost'
+        'NAME': 'ynbifjkf',
+        'USER': 'ynbifjkf',
+        'PASSWORD': 'sTk-SBoHHuwFmOO_zJqLXZoL1MgubbK1',
+        'HOST': 'isilo.db.elephantsql.com'
     }
 }
 
