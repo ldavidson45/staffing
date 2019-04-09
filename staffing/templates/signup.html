@@ -2,7 +2,13 @@
 <h2>Sign up</h2>
 <form method="post">
   {% csrf_token %}
-  {{ form.as_p }}
+
+  <ul>
+    {% for field in form.visible_fields %}
+    <li>{{ field.label_tag }} {{ field }}</li>
+    {% endfor %}
+  </ul>
+
   <button type="submit">Sign up</button>
 </form>
 {% endblock %}

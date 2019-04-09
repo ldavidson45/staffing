@@ -1,8 +1,12 @@
 {% extends 'base.html' %} {% block content %}
-<h2>Add A Company</h2>
+<h2>Add Your Company</h2>
 <form method="post">
   {% csrf_token %}
-  {{ form.as_p }}
+  <ul>
+    {% for field in form.visible_fields %}
+    <li>{{ field.label_tag }} {{ field }}</li>
+    {% endfor %}
+  </ul>
   <button type="submit">Add Company</button>
 </form>
 {% endblock %}
