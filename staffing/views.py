@@ -82,6 +82,6 @@ def edit_role_log(request, pk):
 def employee_detail(request, pk):
     employee = Employee.objects.get(pk=pk)
     roles = get_employee_roles(employee)
-    return render(request, 'employee_detail.html', {'roles': role, 'employee': employee})
+    return render(request, 'employee_detail.html', {'roles': roles, 'employee': employee})
 
-    
+
