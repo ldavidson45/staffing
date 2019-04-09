@@ -1,4 +1,3 @@
-{% load crispy_forms_tags %}
 <html>
 
 <head>
@@ -27,15 +26,52 @@
 
 <div class="wrapper">
 
-  {% include 'sidebar.html' %}
+    <!-- Sidebar -->
+    <nav id="sidebar">
+       <div class="sidebar-header">
+            <h3>Sidebar</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <p>Staffing</p>
+            <li class="active">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Staffing</a>
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li>
+                        <a href="#">Home 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Home 3</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Employees</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Current Employees</a>
+                    </li>
+                    <li>
+                        <a href="#">Former Employees</a>
+                    </li>
+                    <li>
+                        <a href="#">Add a New Employee</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
     <!-- Page Content -->
   
     <div id="content">
-       {% block content %} 
-       
-       {% crispy form %}
-       
-       {% endblock %}
+       {% block content %} {% endblock %}
 
 </div>   
 
