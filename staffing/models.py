@@ -40,3 +40,20 @@ class Role_Type(models.Model):
         verbose_name="role type"
     def __str__(self):
         return self.title
+
+class Employee(models.Model):
+    status_choices = (
+    ('active', 'active'),
+    ('inactive', 'inactive')
+)
+    name=models.CharField(max_length=200)
+    company=models.ForeignKey(Company, on_delete=models.CASCADE, related_name='employees')
+    role=models.ForeignKey(Role_Type, on_delete=models.CASCADE, related_name='employees')
+    status= models.CharField(max_length=2,
+        choices=status_choices,
+        default='active')
+    class Meta:
+        verbose_name_plural = "employees"
+        verbose_name='employee'
+    def __str__(self):
+        return self.name
