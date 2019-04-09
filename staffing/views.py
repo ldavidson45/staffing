@@ -33,4 +33,4 @@ def create_company(request, pk):
             return redirect('/')
     else:
         form = CompanyForm()
-    return render(request, 'signup.html', {'form': form})
+    return render(request, 'create_company.html', {'form': form})
