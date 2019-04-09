@@ -1,0 +1,10 @@
+{% extends 'base.html' %} {% block content %}
+<h2>{{ employee.name }}</h2>
+<p>Status: {{ employee.status }}</p>
+
+{% for role in roles %}
+<p>{{role.title}}</p>
+{% endfor %}
+
+</form>
+{% endblock %}
