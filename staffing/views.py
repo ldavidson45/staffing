@@ -60,6 +60,6 @@ def create_employee(request):
             employee.company = company
             employee.save()
             return redirect('employee_list')
-        else:
-            form = EmployeeForm()
+    else:
+        form = EmployeeForm()
     return render(request, 'create_employee.html', {'form': form})
