@@ -3,7 +3,7 @@ from .forms import CustomUserCreationForm, CompanyForm, RoleTypeForm
 from django.contrib.auth import login, authenticate
 from django.urls import reverse_lazy
 from django.views import generic
-from .models import Company, Profile
+from .models import Company, Profile, Role_Type
 # Create your views here.
 
 # class SignUp(generic.CreateView):
@@ -41,8 +41,11 @@ def company_detail(request, pk):
     if form.is_valid():
         role = form.save(commit=False)
         role.company = company
-        comment.save()
+        role.save()
         return redirect(request.path)
+    else:  # 5
+        # Create an empty form instance
+        form = RoleTypeForm()
     return render(request, 'company_detail.html', {'company': company, 'form': form, })
 
 

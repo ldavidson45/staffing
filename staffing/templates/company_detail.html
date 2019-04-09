@@ -1,8 +1,14 @@
 {% extends 'base.html' %} {% block content %}
 <h2>{{ company.name }}</h2>
 <ul>
-  {% for role_type in company.role_types.all %}
-  <li>{{ role_type.title }}</li>
+  {% for role in company.roles.all %}
+  <li>{{ role.title }}</li>
   {% endfor %}
 </ul>
+
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Add</button>
+</form>
 {% endblock %}

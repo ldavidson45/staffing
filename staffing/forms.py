@@ -23,4 +23,4 @@ class CompanyForm(forms.ModelForm):
 class RoleTypeForm(forms.ModelForm):
     class Meta:
         model = Role_Type
-        fields = ('title')
+        fields = ('title',)

@@ -34,8 +34,9 @@ class Profile(models.Model):
 
 class Role_Type(models.Model):
     title=models.CharField(max_length=50)
-    company=models.ForeignKey(Company, verbose_name=_("role type"), on_delete=models.CASCADE)
-        class Meta:
-            verbose_name_plural = "role types"
+    company=models.ForeignKey(Company, on_delete=models.CASCADE, related_name='roles')
+    class Meta:
+        verbose_name_plural = "role types"
+        verbose_name="role type"
     def __str__(self):
         return self.title
