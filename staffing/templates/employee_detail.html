@@ -1,10 +1,24 @@
 {% extends 'base.html' %} {% block content %}
-<h2>{{ employee.name }}</h2>
-<p>Status: {{ employee.status }}</p>
 
-{% for role in roles %}
-<p>{{role.role_type}}</p>
-{% endfor %}
+<section class="employee-show">
+  <h2 class="employee-name">{{ employee.name }}</h2>
+  <p>Status: {{ employee.status }}</p>
+  <p>Current Position: {{ current_role.name }}</p>
 
-</form>
+  <table>
+    <tr>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Position</th>
+    </tr>
+    {% for role in roles %}
+    <tr>
+      <td>{{ role.start_date }}</td>
+      <td>{{ role.end_date }}</td>
+      <td>{{ role.role_type }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</section>
+
 {% endblock %}

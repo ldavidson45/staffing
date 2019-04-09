@@ -63,6 +63,6 @@ class Role_Log(models.Model):
     employee= models.ForeignKey(Employee, on_delete=models.PROTECT, related_name='role_logs')
     company= models.ForeignKey(Company, on_delete=models.CASCADE, related_name='role_logs')
     start_date=models.DateField(auto_now=False, auto_now_add=False)
-    end_date=models.DateField(auto_now=False, auto_now_add=False, blank=True)
+    end_date=models.DateField(auto_now=False, auto_now_add=False, null=True, blank=True)
 
     

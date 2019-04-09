@@ -1,0 +1,22 @@
+// font-family: 'Work Sans', sans-serif;
+// font-family: 'Neuton', serif;
+// font-family: 'Catamaran', sans-serif;
+
+$mainfont: "Catamaran", sans-serif;
+$darkblue: #35434c;
+$darkgreen: #465c4b;
+$yellow: #98946f;
+$khaki: #c9be94;
+$lightyellow: #f5edbe;
+
+.employee-name {
+  font-family: $mainfont;
+  color: $darkblue;
+}
+
+.employee-show {
+  height: 100vh;
+  width: 70vw;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+}

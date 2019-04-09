@@ -5,7 +5,7 @@ from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib import messages
 from .models import Company, Profile, Role_Type, Employee, Role_Log
-from .script import get_employee_roles
+from .script import get_employee_roles, get_current_role
 # Create your views here.
 
 def sign_up(request):
@@ -82,6 +82,8 @@ def edit_role_log(request, pk):
 def employee_detail(request, pk):
     employee = Employee.objects.get(pk=pk)
     roles = get_employee_roles(employee)
-    return render(request, 'employee_detail.html', {'roles': roles, 'employee': employee})
+    current_role = get_current_role(employee)
+
+    return render(request, 'employee_detail.html', {'roles': roles, 'employee': employee, 'current_role': current_role})
 
 
