@@ -11,6 +11,9 @@ class Company(models.Model):
         verbose_name_plural = 'companies'
         verbose_name = 'company name'
 
+    def __str__(self):
+        return self.name
+
 class CustomUserManager(UserManager):
     pass
 
@@ -25,3 +28,6 @@ class Profile(models.Model):
     class Meta: 
         verbose_name_plural = 'profiles'
         verbose_name = 'profile'
+
+    def __str__(self):
+        return self.user.username
