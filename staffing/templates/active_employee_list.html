@@ -1,8 +1,12 @@
 {% extends 'base.html' %} {% block content %}
+<div class="card">
+<div class="card-title">
 <h2>Active Employees</h2>
+</div>
 <ul>
   {% for employee in employees %}
   <li>{{ employee.name }} - {{ employee.role }}</li>
   {% endfor %}
 </ul>
+</div>
 {% endblock %}
