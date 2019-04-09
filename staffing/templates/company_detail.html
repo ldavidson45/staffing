@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block content %}
+<h2>{{ company.name }}</h2>
+<ul>
+  {% for role_type in company.role_types.all %}
+  <li>{{ role_type.title }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

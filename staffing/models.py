@@ -37,3 +37,5 @@ class Role_Type(models.Model):
     company=models.ForeignKey(Company, verbose_name=_("role type"), on_delete=models.CASCADE)
         class Meta:
             verbose_name_plural = "role types"
+    def __str__(self):
+        return self.title

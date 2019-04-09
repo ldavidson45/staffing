@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import CustomUserCreationForm, CompanyForm
+from .forms import CustomUserCreationForm, CompanyForm, RoleTypeForm
 from django.contrib.auth import login, authenticate
 from django.urls import reverse_lazy
 from django.views import generic
@@ -34,6 +34,17 @@ def create_company(request, pk):
     else:
         form = CompanyForm()
     return render(request, 'create_company.html', {'form': form})
+
+def company_detail(request, pk):
+    company = Company.objects.get(pk=pk)
+    form = RoleTypeForm(request.POST)
+    if form.is_valid():
+        role = form.save(commit=False)
+        role.company = company
+        comment.save()
+        return redirect(request.path)
+    return render(request, 'company_detail.html', {'company': company, 'form': form, })
+
 
 
     
