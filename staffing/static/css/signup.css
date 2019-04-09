@@ -30,5 +30,8 @@ form {
 
 form li {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=signup.css.map */
