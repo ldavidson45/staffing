@@ -3,14 +3,8 @@ from .forms import CustomUserCreationForm, CompanyForm, RoleTypeForm
 from django.contrib.auth import login, authenticate
 from django.urls import reverse_lazy
 from django.views import generic
-from .models import Company, Profile, Role_Type
+from .models import Company, Profile, Role_Type, Employee
 # Create your views here.
-
-# class SignUp(generic.CreateView):
-#     form_class = CustomUserCreationForm
-#     success_url = reverse_lazy('signup')
-#     template_name = 'signup.html'
-
 
 def sign_up(request):
     if request.method == 'POST':
@@ -48,6 +42,10 @@ def company_detail(request, pk):
         form = RoleTypeForm()
     return render(request, 'company_detail.html', {'company': company, 'form': form, })
 
-
+def employee_list(request):
+    pk = request.user.profile.company.pk
+    company = Company.objects.get(pk=pk)
+    employees = Employee.objects.all().filter(company=company)
+    return render(request, 'active_employee_list.html', {'employees': employees})
 
     

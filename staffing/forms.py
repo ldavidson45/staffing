@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-from .models import CustomUser, Profile, Company, Role_Type
+from .models import CustomUser, Profile, Company, Role_Type, Employee
 
 class CustomUserCreationForm(UserCreationForm):
 
@@ -24,3 +24,8 @@ class RoleTypeForm(forms.ModelForm):
     class Meta:
         model = Role_Type
         fields = ('title',)
+
+class EmployeeForm(forms.ModelForm):
+    class Meta:
+        model = Employee
+        fields = ('name', 'role')

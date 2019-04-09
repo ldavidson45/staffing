@@ -43,13 +43,13 @@ class Role_Type(models.Model):
 
 class Employee(models.Model):
     status_choices = (
-    ('active', 'active'),
-    ('inactive', 'inactive')
-)
+        ('active', 'active'),
+        ('inactive', 'inactive')
+    )
     name=models.CharField(max_length=200)
     company=models.ForeignKey(Company, on_delete=models.CASCADE, related_name='employees')
     role=models.ForeignKey(Role_Type, on_delete=models.CASCADE, related_name='employees')
-    status= models.CharField(max_length=2,
+    status= models.CharField(max_length=50,
         choices=status_choices,
         default='active')
     class Meta:
