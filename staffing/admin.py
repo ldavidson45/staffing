@@ -15,3 +15,5 @@ admin.site.register(Company)
 admin.site.register(Profile)
 admin.site.register(Role_Type)
 admin.site.register(Employee)
+admin.site.register(Role_Log)
+

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import CustomUserCreationForm, CompanyForm, RoleTypeForm, EmployeeForm
+from .forms import CustomUserCreationForm, CompanyForm, RoleTypeForm, EmployeeForm, RoleLogForm
 from django.contrib.auth import login, authenticate
 from django.urls import reverse_lazy
 from django.views import generic
@@ -63,3 +63,17 @@ def create_employee(request):
     else:
         form = EmployeeForm()
     return render(request, 'create_employee.html', {'form': form})
+
+def edit_role_log(request, pk):
+    employee = Employee.objects.get(pk=pk)
+    if request.method == 'POST':
+        form = RoleLogForm(request.POST)
+        if form.is_valid():
+            role_log = form.save(commit = False)
+            role_log.employee = employee
+            role_log.company = employee.company
+            role_log.save()
+            return redirect('employee_list')
+    else: 
+        form = RoleLogForm(request.POST)
+    return render(request, 'role_log_edit.html', {'form': form, 'employee': employee})

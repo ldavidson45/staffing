@@ -57,3 +57,12 @@ class Employee(models.Model):
         verbose_name='employee'
     def __str__(self):
         return self.name
+
+class Role_Log(models.Model):
+    role_type= models.ForeignKey(Role_Type, on_delete=models.PROTECT, related_name='role_logs')
+    employee= models.ForeignKey(Employee, on_delete=models.PROTECT, related_name='role_logs')
+    company= models.ForeignKey(Company, on_delete=models.CASCADE, related_name='role_logs')
+    start_date=models.DateField(auto_now=False, auto_now_add=False)
+    end_date=models.DateField(auto_now=False, auto_now_add=False)
+
+    
