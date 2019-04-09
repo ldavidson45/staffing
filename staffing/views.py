@@ -3,6 +3,7 @@ from .forms import CustomUserCreationForm, CompanyForm, RoleTypeForm
 from django.contrib.auth import login, authenticate
 from django.urls import reverse_lazy
 from django.views import generic
+from django.contrib import messages
 from .models import Company, Profile, Role_Type, Employee
 # Create your views here.
 
