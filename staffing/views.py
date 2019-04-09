@@ -19,6 +19,7 @@ def sign_up(request):
     return render(request, 'signup.html', {'form': form})
 
 def create_company(request, pk):
+    user = request.user
     if request.method == 'POST':
         form = CompanyForm(request.POST)
         if form.is_valid():
@@ -27,7 +28,7 @@ def create_company(request, pk):
             return redirect('/')
     else:
         form = CompanyForm()
-    return render(request, 'create_company.html', {'form': form})
+    return render(request, 'create_company.html', {'form': form, 'user':user})
 
 def company_detail(request, pk):
     company = Company.objects.get(pk=pk)
