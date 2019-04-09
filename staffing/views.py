@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
-from .forms import CustomUserCreationForm, CompanyForm, RoleTypeForm
+from .forms import CustomUserCreationForm, CompanyForm, RoleTypeForm, EmployeeForm
 from django.contrib.auth import login, authenticate
 from django.urls import reverse_lazy
 from django.views import generic
+from django.contrib import messages
 from .models import Company, Profile, Role_Type, Employee
 # Create your views here.
 
@@ -49,4 +50,16 @@ def employee_list(request):
     employees = Employee.objects.all().filter(company=company)
     return render(request, 'active_employee_list.html', {'employees': employees})
 
-    
+def create_employee(request):
+    pk = request.user.profile.company.pk
+    company = Company.objects.get(pk=pk)
+    if request.method == 'POST':
+        form = EmployeeForm(request.POST)
+        if form.is_valid():
+            employee = form.save(commit = False)
+            employee.company = company
+            employee.save()
+            return redirect('employee_list')
+    else:
+        form = EmployeeForm()
+    return render(request, 'create_employee.html', {'form': form})

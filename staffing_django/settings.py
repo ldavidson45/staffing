@@ -44,6 +44,8 @@ INSTALLED_APPS = [
 
 AUTH_USER_MODEL = 'staffing.CustomUser'
 
+LOGIN_REDIRECT_URL = '/'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
