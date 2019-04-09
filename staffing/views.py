@@ -34,3 +34,6 @@ def create_company(request, pk):
     else:
         form = CompanyForm()
     return render(request, 'create_company.html', {'form': form})
+
+
+    
