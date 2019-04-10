@@ -1,14 +1,7 @@
-(function($) {
-  $(function() {
-    // Plugin initialization
-    $("select")
-      .not(".disabled")
-      .formSelect();
-  });
-})(jQuery);
-
-$(function() {
-  $("#id_date").datepicker({
-    format: "dd/mm/yyyy"
-  });
-});
+<script>
+  $(function (){" "}
+  {$("#id_start_date").datetimepicker({
+    format: "d/m/Y H:i"
+  })}
+  );
+</script>;

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "e87e2063f2ce966d1d94238a6bc8bcf8650a173dd0fb0409815b5147d18dff18"
+            "sha256": "db725cf5bd101f6de88083d39aabae3a5ea8e47b15a95b440c40722925333ca7"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -23,6 +23,14 @@
             ],
             "index": "pypi",
             "version": "==2.2"
+        },
+        "django-tempus-dominus": {
+            "hashes": [
+                "sha256:2b914693f16d6bdd3c457c54a7da1507189bbe7d430ba7deb327223c4e4ed61d",
+                "sha256:4ac5c3e7fa27540b164954943d79b7fb33255d5ab1407861d3ea1e9a4497c1d5"
+            ],
+            "index": "pypi",
+            "version": "==5.1.2.4"
         },
         "psycopg2-binary": {
             "hashes": [
@@ -60,10 +68,10 @@
         },
         "pytz": {
             "hashes": [
-                "sha256:32b0891edff07e28efe91284ed9c31e123d84bea3fd98e1f72be2508f43ef8d9",
-                "sha256:d5f05e487007e29e03409f9398d074e158d920d36eb82eaf66fb1136b0c5374c"
+                "sha256:303879e36b721603cc54604edcac9d20401bdbe31e1e4fdee5b9f98d5d31dfda",
+                "sha256:d747dd3d23d77ef44c6a3526e274af6efeb0a6f1afd5a69ba4d5be4098c8e141"
             ],
-            "version": "==2018.9"
+            "version": "==2019.1"
         },
         "sqlparse": {
             "hashes": [
