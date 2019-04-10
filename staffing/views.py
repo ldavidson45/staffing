@@ -65,8 +65,10 @@ def create_employee(request):
         form = EmployeeForm()
     return render(request, 'create_employee.html', {'form': form})
 
-def edit_role_log(request, pk):
-    employee = Employee.objects.get(pk=pk)
+def employee_detail(request, pk):
+    employee = Employee.objects.select_related().get(pk=pk)
+    roles = get_employee_roles(employee)
+    current_role = get_current_role(employee)
     if request.method == 'POST':
         form = RoleLogForm(request.POST)
         if form.is_valid():
@@ -77,13 +79,7 @@ def edit_role_log(request, pk):
             return redirect('employee_list')
     else: 
         form = RoleLogForm(request.POST)
-    return render(request, 'role_log_edit.html', {'form': form, 'employee': employee})
-
-def employee_detail(request, pk):
-    employee = Employee.objects.get(pk=pk)
-    roles = get_employee_roles(employee)
-    current_role = get_current_role(employee)
-
-    return render(request, 'employee_detail.html', {'roles': roles, 'employee': employee, 'current_role': current_role})
+        print(employee)
+    return render(request, 'employee_detail.html', {'form': form, 'roles': roles, 'employee': employee, 'current_role': current_role})
 
 

@@ -3,15 +3,17 @@
 <section class="employee-show">
   <h2 class="employee-name">{{ employee.name }}</h2>
   <p>Status: {{ employee.status }}</p>
-  <p>Current Position: {{ current_role.name }}</p>
+  <p>Current Role: {{ current_role.name }}</p>
 
-  <table>
+  <table class="table">
+    
     <tr>
       <th>Start Date</th>
       <th>End Date</th>
       <th>Position</th>
     </tr>
     {% for role in roles %}
+    <form>
     <tr>
       <td>{{ role.start_date }}</td>
       <td>{{ role.end_date }}</td>
@@ -19,6 +21,14 @@
     </tr>
     {% endfor %}
   </table>
+  <form  method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+<button type="submit" class="save btn btn-default">Save</button>
+
+</form>
+
+
 </section>
 
 {% endblock %}

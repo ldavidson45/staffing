@@ -64,5 +64,6 @@ class Role_Log(models.Model):
     company= models.ForeignKey(Company, on_delete=models.CASCADE, related_name='role_logs')
     start_date=models.DateField(auto_now=False, auto_now_add=False)
     end_date=models.DateField(auto_now=False, auto_now_add=False, null=True, blank=True)
-
+def __str__(self):
+        return self.role_type
     
