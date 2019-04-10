@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'staffing',
     'crispy_forms',
+    'tempus_dominus'
 ]
 
 AUTH_USER_MODEL = 'staffing.CustomUser'
@@ -76,6 +77,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'staffing_django.wsgi.application'
 
+TEMPUS_DOMINUS_INCLUDE_ASSETS = True
+TEMPUS_DOMINUS_LOCALIZE = True
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
