@@ -18,6 +18,8 @@ $lightyellow: #f5edbe;
 	font-family: 'Rajdhani', sans-serif;
 	letter-spacing: 25px;
 	color: #35434c;
+	color: #35434c;
+	font-size: 53px;
 }
 
 h2 {
@@ -31,11 +33,10 @@ form {
 	background-color: rgba(255, 255, 255, 0.749);
 	box-shadow: 0px 2px 23px 0px rgba(128, 128, 128, 0.75);
 	margin: auto;
-	margin-top: 7em;
-	width: 50%;
+	margin-top: 6em;
+	width: 20%;
 	padding: 10px;
 	text-align: center;
-	width: fit-content;
 	border-radius: 5px;
 	font-family: 'Catamaran', serif;
 	li {
@@ -44,10 +45,11 @@ form {
 	input {
 		border-radius: 5px;
 		border: 1px solid rgba(85, 85, 85, 0.324);
+		margin-bottom: 25px;
 	}
 	label {
 		font-size: 20px;
-		color: rgb(128, 125, 125);
+		color: $darkblue;
 	}
 	ul {
 		margin: 0;
@@ -62,7 +64,7 @@ input {
 }
 
 a {
-	font-size: 10px;
+	font-size: 13px;
 	text-decoration: none;
 	color: rgba(81, 86, 145, 0.818);
 }

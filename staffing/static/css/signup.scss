@@ -48,7 +48,7 @@ form {
 	}
 	label {
 		font-size: 20px;
-		color: rgb(128, 125, 125);
+		color: $darkblue;
 	}
 	ul {
 		margin: 0;
@@ -63,7 +63,7 @@ button {
 }
 
 a {
-	font-size: 10px;
+	font-size: 13px;
 	text-decoration: none;
 	color: rgba(81, 86, 145, 0.818);
 }
