@@ -9,6 +9,8 @@ urlpatterns = [
     path('', views.employee_list, name="employee_list"),
     path('login/', auth_views.LoginView.as_view(template_name='login_page.html')),
     path('logout/', auth_views.LogoutView.as_view(template_name='logout.html')),
-    path('employee/new', views.create_employee, name="create_employee")
+    path('employee/new', views.create_employee, name="create_employee"),
+    # path('role-log/<int:pk>', views.edit_role_log, name="edit_role_log"),
+    path('employee/<int:pk>', views.employee_detail, name="employee_detail")
 ]
 
