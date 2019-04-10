@@ -6,16 +6,16 @@
 {% load static %}
 
 <div class="wrapper">
-<h2>Sign up</h2>
+<h1>STAFFING<h1>
 <form action="{% url 'signup' %}" method="post" >
   {% csrf_token %}
-
+<h2>Sign up</h2>
   <ul>
     {% for field in form.visible_fields %}
     <li>{{ field.label_tag }} {{ field }}</li>
     {% endfor %}
   </ul>
-  <br>
+ 
   <button type="submit">Sign up</button>
 </form>
 

@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Catamaran:300|Neuton|Work+Sans:300");
+h1 {
+  font-family: 'Catamaran', serif;
+  color: #35434c;
+}
+
 h2 {
   font-family: 'Work Sans', sans-serif;
-  color: white;
+  color: #35434c;
   margin: auto;
-  width: 50%;
-  padding: 10px;
   text-align: center;
-  margin-top: 15%;
 }
 
 .signup-bg {
@@ -16,7 +18,7 @@ h2 {
 }
 
 form {
-  background-color: rgba(255, 255, 255, 0.502);
+  background-color: rgba(255, 255, 255, 0.324);
   margin: auto;
   width: 50%;
   padding: 10px;
@@ -30,8 +32,22 @@ form {
 
 form li {
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+}
+
+form input {
+  border-radius: 5px;
+  border: 1px solid rgba(85, 85, 85, 0.324);
+}
+
+form label {
+  font-size: 20px;
+  color: #807d7d;
+}
+
+button {
+  font-family: 'Catamaran', serif;
+  border-radius: 4px;
+  font-size: 15px;
+  background-color: rgba(85, 85, 85, 0.187);
 }
 /*# sourceMappingURL=signup.css.map */
