@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACJ,MAAM,EAAE,eAAe;EACvB,KAAK,EAAE,WAAW;EAClB,OAAO,EAAE,IAAI;CACb",
+    "sources": [
+        "create_company.scss"
+    ],
+    "names": [],
+    "file": "create_company.css"
+}

@@ -1,5 +1,9 @@
 {% extends 'base.html' %} {% block content %}
+
+<link href="/static/css/create_company.css" rel="stylesheet"/>
+<br>
 <h1>Welcome {{ user.first_name }}!</h1>
+<br>
 <h2>Add Your Company</h2>
 <form method="post">
   {% csrf_token %}
