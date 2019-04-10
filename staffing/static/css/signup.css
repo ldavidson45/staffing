@@ -55,4 +55,10 @@ button {
   font-size: 15px;
   background-color: rgba(85, 85, 85, 0.187);
 }
+
+a {
+  font-size: 10px;
+  text-decoration: none;
+  color: rgba(81, 86, 145, 0.818);
+}
 /*# sourceMappingURL=signup.css.map */
