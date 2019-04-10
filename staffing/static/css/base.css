@@ -18,6 +18,12 @@
   margin-top: 15px;
 }
 
+#sidebar a {
+  text-decoration: none;
+  color: grey;
+  padding: 14px;
+}
+
 #content {
   display: block;
   width: 80vw;
