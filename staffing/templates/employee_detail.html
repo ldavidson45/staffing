@@ -4,9 +4,21 @@
 
 <section class="employee-show">
   <h2 class="employee-name">{{ employee.name }}</h2>
-  <p>Status: {{ employee.status }}</p>
-  <p>Current Role: {{ employee.role }}</p>
-
+  <a href="{% url 'employee_edit' pk=employee.pk %}"
+    >&nbsp;&nbsp;Edit employee info</a
+  >
+  <div class="employee-info-container">
+    <div>
+      <p class="label"><i class="fas fa-user-clock"></i>&nbsp;&nbsp;Status</p>
+      <p class="detail-text">{{ employee.status }}</p>
+    </div>
+    <div>
+      <p class="label">
+        <i class="fas fa-address-card"></i>&nbsp;&nbsp;Current Role
+      </p>
+      <p class="detail-text">{{ employee.role }}</p>
+    </div>
+  </div>
   <table class="table">
     <tr>
       <th>Start Date</th>

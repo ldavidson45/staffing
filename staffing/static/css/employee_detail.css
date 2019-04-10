@@ -28,4 +28,34 @@ select {
   margin-top: 10px;
   border: none;
 }
+
+.employee-info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.employee-info-container div {
+  width: 16rem;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.label {
+  color: #98946f;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.detail-text {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #35434c;
+  text-transform: capitalize;
+}
 /*# sourceMappingURL=employee_detail.css.map */
