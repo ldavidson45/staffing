@@ -9,4 +9,23 @@
   margin: 0 auto;
   padding: 2rem 2rem;
 }
+
+.new-role {
+  border: 0.3rem dashed #c9be94;
+  padding: 2rem;
+}
+
+select {
+  height: 36px;
+}
+
+.form-button {
+  width: 100%;
+  background: rgba(223, 223, 223, 0.64);
+  font-family: "Catamaran", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-top: 10px;
+  border: none;
+}
 /*# sourceMappingURL=employee_detail.css.map */

@@ -39,7 +39,7 @@ class RoleLogForm(forms.ModelForm):
         model = Role_Log
         fields = ('role_type', 'start_date', 'end_date')
         widgets = {
-            'start_date': DatePicker(), 
-            'end_date': DatePicker()
+            'start_date': DatePicker(attrs={'append': 'fa fa-calendar'}), 
+            'end_date': DatePicker(attrs={'append': 'fa fa-calendar'})
             }
 
