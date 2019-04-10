@@ -3,7 +3,9 @@ import datetime
 from django import forms
 from .models import CustomUser, Profile, Company, Role_Type, Employee, Role_Log
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-from tempus_dominus.widgets import DatePicker, TimePicker, DateTimePicker
+from tempus_dominus.widgets import DatePicker
+from django.forms import formset_factory
+
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -50,7 +52,9 @@ class RoleLogForm(forms.ModelForm):
         model = Role_Log
         fields = ('role_type', 'start_date', 'end_date')
         widgets = {
-            'start_date': DatePicker(attrs={'append': 'fa fa-calendar'}), 
+            'start_date': DatePicker(attrs={
+                'append': 'fa fa-calendar',
+                'data-target': '#datetimepicker4'}), 
             'end_date': DatePicker(attrs={'append': 'fa fa-calendar'})
             }
 

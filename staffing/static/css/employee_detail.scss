@@ -38,3 +38,26 @@ select {
 	margin-left: 40%;
 	border-radius: 5px;
 }
+
+.employee-info-container {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  div {
+    width: 16rem;
+    padding: 2rem;
+    margin: 2rem;
+  }
+}
+.label {
+  color: $yellow;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.detail-text {
+  font-size: 1.2rem;
+  text-align: center;
+  color: $darkblue;
+  text-transform: capitalize;
+}

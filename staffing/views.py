@@ -5,7 +5,9 @@ from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib import messages
 from .models import Company, Profile, Role_Type, Employee, Role_Log
-from .script import get_employee_roles, get_current_role
+from .script import get_employee_roles
+from django.shortcuts import render_to_response
+
 # Create your views here.
 
 def sign_up(request):
@@ -68,7 +70,6 @@ def create_employee(request):
 def employee_detail(request, pk):
     employee = Employee.objects.select_related().get(pk=pk)
     roles = get_employee_roles(employee)
-    current_role = get_current_role(employee)
     if request.method == 'POST':
         form = RoleLogForm(request.POST)
         if form.is_valid():
@@ -76,10 +77,29 @@ def employee_detail(request, pk):
             role_log.employee = employee
             role_log.company = employee.company
             role_log.save()
-            return redirect('employee_list')
-    else: 
-        form = RoleLogForm(request.POST)
-        print(employee)
-    return render(request, 'employee_detail.html', {'form': form, 'roles': roles, 'employee': employee, 'current_role': current_role})
+            return redirect( 'employee_detail', pk=employee.pk)
 
+
+    else: 
+        form = RoleLogForm()
+
+    return render(request, 'employee_detail.html', {'form': form, 'roles': roles, 'employee': employee})
+
+
+def role_log_delete(request, pk):
+    role = Role_Log.objects.get(id=pk)
+    employee = role.employee
+    Role_Log.objects.get(id=pk).delete()
+    return redirect('employee_detail', pk=employee.pk)
+
+def employee_edit(request, pk):
+    employee = Employee.objects.get(pk=pk)
+    if request.method == "POST":
+        form = EmployeeForm(request.POST, instance=employee)
+        if form.is_valid():
+            employee = form.save()
+            return redirect('employee_detail', pk=employee.pk)
+    else:
+        form = EmployeeForm(instance=employee)
+    return render(request, 'create_employee.html', {"form": form})
 
