@@ -83,5 +83,7 @@ def employee_detail(request, pk):
     return render(request, 'employee_detail.html', {'form': form, 'roles': roles, 'employee': employee, 'current_role': current_role})
 
 def role_log_delete(request, pk):
+    role = Role_Log.objects.get(id=pk)
+    employee = role.employee
     Role_Log.objects.get(id=pk).delete()
-    return redirect('/')
+    return redirect('employee_detail', pk=employee.pk)
