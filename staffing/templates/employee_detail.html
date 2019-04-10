@@ -5,7 +5,7 @@
 <section class="employee-show">
   <h2 class="employee-name">{{ employee.name }}</h2>
   <p>Status: {{ employee.status }}</p>
-  <p>Current Role: {{ current_role.name }}</p>
+  <p>Current Role: {{ employee.role }}</p>
 
   <table class="table">
     <tr>
@@ -18,6 +18,11 @@
       <td>{{ role.start_date }}</td>
       <td>{{ role.end_date }}</td>
       <td>{{ role.role_type }}</td>
+      <td>
+        <a href="{% url 'role_log_delete' pk=role.pk %}"
+          ><i class="far fa-trash-alt"></i
+        ></a>
+      </td>
     </tr>
     {% endfor %}
   </table>
