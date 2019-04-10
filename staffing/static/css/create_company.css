@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:300|Neuton|Work+Sans:300");
 form {
   background-color: rgba(223, 223, 223, 0.64);
   -webkit-box-shadow: 0px 2px 23px 0px rgba(0, 0, 0, 0.75);
@@ -19,5 +20,12 @@ h1 {
 
 h2 {
   margin-bottom: 30px;
+}
+
+button {
+  font-family: 'Catamaran', serif;
+  border-radius: 4px;
+  font-size: 15px;
+  background-color: rgba(85, 85, 85, 0.187);
 }
 /*# sourceMappingURL=create_company.css.map */

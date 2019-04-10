@@ -10,7 +10,7 @@
 #sidebar {
   min-height: 100vh;
   background-color: #dfdfdf;
-  width: 230px;
+  width: 280px;
 }
 
 #sidebar li {
@@ -26,5 +26,6 @@
 
 a {
   text-decoration: none;
+  color: grey;
 }
 /*# sourceMappingURL=base.css.map */

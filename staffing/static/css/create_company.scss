@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:300|Neuton|Work+Sans:300');
+
 $mainfont: 'Catamaran', sans-serif;
 $darkblue: #35434c;
 $darkgreen: #465c4b;
@@ -25,4 +27,11 @@ h1 {
 
 h2 {
 	margin-bottom: 30px;
+}
+
+button {
+	font-family: 'Catamaran', serif;
+	border-radius: 4px;
+	font-size: 15px;
+	background-color: rgba(85, 85, 85, 0.187);
 }

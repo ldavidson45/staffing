@@ -13,7 +13,7 @@ $lightyellow: #f5edbe;
 #sidebar {
 	min-height: 100vh;
 	background-color: rgb(223, 223, 223);
-	width: 230px;
+	width: 280px;
 	li {
 		list-style-type: none;
 		margin-top: 15px;
@@ -28,4 +28,5 @@ $lightyellow: #f5edbe;
 
 a {
 	text-decoration: none;
+	color: grey;
 }
