@@ -68,7 +68,7 @@ def create_employee(request):
 def employee_detail(request, pk):
     employee = Employee.objects.select_related().get(pk=pk)
     roles = get_employee_roles(employee)
-    current_role = get_current_role(employee)
+    current_role = "director"
     if request.method == 'POST':
         form = RoleLogForm(request.POST)
         if form.is_valid():

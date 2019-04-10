@@ -78,7 +78,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'staffing_django.wsgi.application'
 
 TEMPUS_DOMINUS_INCLUDE_ASSETS = True
-TEMPUS_DOMINUS_LOCALIZE = True
+TEMPUS_DOMINUS_LOCALIZE = False
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases

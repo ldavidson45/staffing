@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-<link rel="stylesheet" href="../static/css/employee_detail.css"/>
+<link rel="stylesheet" href="../static/css/employee_detail.css" />
 
 <section class="employee-show">
   <h2 class="employee-name">{{ employee.name }}</h2>
@@ -22,7 +22,7 @@
     {% endfor %}
   </table>
 
-  <section class="new-role" >
+  <section class="new-role">
     <h5>Add A New Role:</h5>
     <form method="post">
       {% csrf_token %}
@@ -43,7 +43,13 @@
       <button type="submit" class="form-button">Save</button>
     </form>
   </section>
-  </section>
-
-  {% endblock %}
 </section>
+<script>
+  $(function() {
+    $("#datetimepicker1").datetimepicker({
+      format: "MM/DD/YYYY"
+    });
+  });
+</script>
+
+{% endblock %}
