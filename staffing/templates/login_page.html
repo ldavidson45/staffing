@@ -1,12 +1,19 @@
-{% extends "base.html" %} {% block content %} {% if form.errors %}
+{% comment %} {% extends "base.html" %} {% block content %}  {% endcomment %}
+{% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
 
+<html class="login-bg">
+
+<link href="/static/css/login.css" rel="stylesheet"/>
+
+<h1>STAFFING<h1>
 <form method="post" action="{% url 'login' %}">
+<h2>Login</h2>
   {% csrf_token %}
   {{ form.as_p }}
 
   <input type="submit" value="login" />
 </form>
 
-{% endblock %}
+{% comment %} {% endblock %} {% endcomment %}
