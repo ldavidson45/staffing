@@ -1,5 +1,25 @@
+$mainfont: 'Catamaran', sans-serif;
+$darkblue: #35434c;
+$darkgreen: #465c4b;
+$yellow: #98946f;
+$khaki: #c9be94;
+$lightyellow: #f5edbe;
+
 form {
 	border: 1px solid black;
-	width: fit-content;
+	width: 45%;
 	padding: 40px;
+	margin-left: 15em;
+	margin-top: 3em;
+	li {
+		list-style-type: none;
+	}
+}
+
+h1 {
+	color: $darkblue;
+}
+
+h2 {
+	margin-bottom: 30px;
 }

@@ -1,8 +1,20 @@
 form {
   border: 1px solid black;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 45%;
   padding: 40px;
+  margin-left: 15em;
+  margin-top: 3em;
+}
+
+form li {
+  list-style-type: none;
+}
+
+h1 {
+  color: #35434c;
+}
+
+h2 {
+  margin-bottom: 30px;
 }
 /*# sourceMappingURL=create_company.css.map */

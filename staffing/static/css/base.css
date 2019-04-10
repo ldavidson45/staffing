@@ -9,13 +9,22 @@
 
 #sidebar {
   min-height: 100vh;
-  background-color: #c9be94a3;
+  background-color: #dfdfdf;
   width: 230px;
+}
+
+#sidebar li {
+  list-style-type: none;
+  margin-top: 15px;
 }
 
 #content {
   display: block;
   width: 80vw;
   margin: 50px;
+}
+
+a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=base.css.map */
