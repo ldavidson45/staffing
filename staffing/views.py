@@ -7,6 +7,12 @@ from django.contrib import messages
 from .models import Company, Profile, Role_Type, Employee, Role_Log
 from .script import get_employee_roles
 from django.shortcuts import render_to_response
+from django.views.generic import View
+from django.http import JsonResponse
+
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -103,3 +109,25 @@ def employee_edit(request, pk):
         form = EmployeeForm(instance=employee)
     return render(request, 'create_employee.html', {"form": form})
 
+class Home_View(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'chart.html', {})
+
+def get_data(request, *args, **kwargs):
+    data = {
+        'sales': 200,
+        'customers': 10
+    }
+    return JsonResponse(data)
+
+
+class ChartData(APIView):
+
+    authentication_classes = []
+    permission_classes = []
+
+    def get(self, request, format=None):
+        data = {
+
+        }
+        return Response(data)

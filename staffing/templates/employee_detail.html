@@ -1,7 +1,6 @@
-<link rel="stylesheet" href="../static/css/employee_detail.css" />
+<link rel="stylesheet" href="../../static/css/employee_detail.css" />
 
 {% extends 'base.html' %} {% block content %}
-
 
 <section class="employee-show">
   <h2 class="employee-name">{{ employee.name }}</h2>
@@ -64,6 +63,7 @@
     </form>
   </section>
 </section>
+
 <script>
   $(function() {
     $("#datetimepicker1").datetimepicker({
