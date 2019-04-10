@@ -4,6 +4,8 @@ from django import forms
 from .models import CustomUser, Profile, Company, Role_Type, Employee, Role_Log
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from tempus_dominus.widgets import DatePicker
+from django.forms import formset_factory
+
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -45,3 +47,4 @@ class RoleLogForm(forms.ModelForm):
             'end_date': DatePicker(attrs={'append': 'fa fa-calendar'})
             }
 
+RoleLogFormset = formset_factory(RoleLogForm)
