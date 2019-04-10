@@ -77,7 +77,7 @@ def employee_detail(request, pk):
             role_log.employee = employee
             role_log.company = employee.company
             role_log.save()
-            return redirect('employee_detail', pk=employee.pk)
+            return redirect( 'employee_detail', pk=employee.pk)
 
 
     else: 
@@ -103,13 +103,3 @@ def employee_edit(request, pk):
         form = EmployeeForm(instance=employee)
     return render(request, 'create_employee.html', {"form": form})
 
-def role_log_edit(request,pk):
-    role = Role_Log.objects.get(pk=pk)
-    if request.method == 'POST':
-        form = RoleLogForm(request.POST, instance=role)
-        if form.is_valid():
-            role = form.save()
-            return redirect('employee_list', pk=role.employee)
-    else:
-        form = RoleLogForm(instance=role)
-    return render(request, 'role_log_form.html', {"form": form})

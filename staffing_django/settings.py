@@ -75,6 +75,7 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'staffing_django.wsgi.application'
 
 TEMPUS_DOMINUS_INCLUDE_ASSETS = True
