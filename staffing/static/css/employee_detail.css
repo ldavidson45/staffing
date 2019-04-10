@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:300|Neuton|Work+Sans:300");
 .employee-name {
   font-family: "Catamaran", sans-serif;
-  color: #35434c;
+  color: #485861;
 }
 
 .employee-show {
@@ -11,7 +12,7 @@
 }
 
 .new-role {
-  border: 0.3rem dashed #c9be94;
+  border: 0.3rem dashed #5e737e;
   padding: 2rem;
 }
 

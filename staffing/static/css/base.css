@@ -9,7 +9,8 @@
 
 #sidebar {
   min-height: 100vh;
-  background-color: #dfdfdf;
+  background: lightgray;
+  background: linear-gradient(262deg, lightgray 59%, #fbfbfb 100%);
   width: 280px;
 }
 
