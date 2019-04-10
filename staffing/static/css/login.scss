@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran:300|Neuton|Work+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Istok+Web|Rajdhani|Rubik|Source+Code+Pro|Titillium+Web|Ubuntu');
 
 $mainfont: 'Catamaran', sans-serif;
 $darkblue: #35434c;
@@ -13,8 +14,9 @@ $lightyellow: #f5edbe;
 	background-size: cover;
 }
 
-h1 {
-	font-family: 'Catamaran', serif;
+.brand {
+	font-family: 'Rajdhani', sans-serif;
+	letter-spacing: 25px;
 	color: #35434c;
 }
 
