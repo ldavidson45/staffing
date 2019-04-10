@@ -5,8 +5,9 @@
 <h1>Welcome {{ user.first_name }}!</h1>
 <h4>Please enter the following information to continue,<h4>
 <br>
+
 <form method="post">
-<h2>Add Your Company</h2>
+<h3>Add Your Company</h3>
   {% csrf_token %}
   <ul>
     {% for field in form.visible_fields %}
