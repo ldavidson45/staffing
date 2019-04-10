@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Istok+Web|Rajdhani|Rubik|Source+Code+Pro|Titillium+Web|Ubuntu");
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23,6 +24,11 @@
   text-decoration: none;
   color: grey;
   padding: 14px;
+}
+
+#sidebar h1 {
+  font-family: 'Rajdhani', sans-serif;
+  letter-spacing: 23px;
 }
 
 #content {

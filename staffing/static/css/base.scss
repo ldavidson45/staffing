@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Istok+Web|Rajdhani|Rubik|Source+Code+Pro|Titillium+Web|Ubuntu');
+
+// font-family: 'Ubuntu', sans-serif;
+// font-family: 'Titillium Web', sans-serif;
+// font-family: 'Rubik', sans-serif;
+// font-family: 'Source Code Pro', monospace;
+// font-family: 'Rajdhani', sans-serif;
+// font-family: 'Istok Web', sans-serif;
+
 $mainfont: 'Catamaran', sans-serif;
 $darkblue: #35434c;
 $darkgreen: #465c4b;
@@ -27,6 +36,10 @@ $lightyellow: #f5edbe;
 		text-decoration: none;
 		color: grey;
 		padding: 14px;
+	}
+	h1 {
+		font-family: 'Rajdhani', sans-serif;
+		letter-spacing: 23px;
 	}
 }
 
