@@ -35,6 +35,10 @@
         <a href="{% url 'role_log_delete' pk=role.pk %}"
           ><i class="far fa-trash-alt"></i
         ></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/role-log/{{ role.pk }}/edit">
+          <i class="far fa-edit"></i>
+        </a>
       </td>
     </tr>
     {% endfor %}
