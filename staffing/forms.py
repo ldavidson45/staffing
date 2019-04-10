@@ -47,4 +47,3 @@ class RoleLogForm(forms.ModelForm):
             'end_date': DatePicker(attrs={'append': 'fa fa-calendar'})
             }
 
-RoleLogFormset = formset_factory(RoleLogForm)
