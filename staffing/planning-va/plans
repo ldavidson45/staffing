@@ -1,0 +1,13 @@
+#35434C
+#465C4B
+#98946F
+#C9BE94 - side bar
+#F5EDBE - 
+
+font 
+
+font-family: 'Work Sans', sans-serif;
+font-family: 'Neuton', serif;
+font-family: 'Catamaran', sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Catamaran:300|Neuton|Work+Sans:300');

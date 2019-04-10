@@ -1,6 +1,13 @@
-{% extends 'base.html' %} {% block content %}
+<html class="signup-bg">
+
+<link href="/static/css/signup.css" rel="stylesheet"/>
+
+
+{% load static %}
+
+<div class="wrapper">
 <h2>Sign up</h2>
-<form method="post">
+<form action="{% url 'signup' %}" method="post" >
   {% csrf_token %}
 
   <ul>
@@ -8,7 +15,9 @@
     <li>{{ field.label_tag }} {{ field }}</li>
     {% endfor %}
   </ul>
-
+  <br>
   <button type="submit">Sign up</button>
 </form>
-{% endblock %}
+
+</div>
+</html>

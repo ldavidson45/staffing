@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 10vw;
+  min-height: 100vh;
+  background-color: #c9be94;
+  max-width: 250px;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#content {
+  display: block;
+  width: 90vw;
+}

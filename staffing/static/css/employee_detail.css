@@ -1,0 +1,61 @@
+.employee-name {
+  font-family: "Catamaran", sans-serif;
+  color: #35434c;
+}
+
+.employee-show {
+  height: 100vh;
+  width: 70vw;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+}
+
+.new-role {
+  border: 0.3rem dashed #c9be94;
+  padding: 2rem;
+}
+
+select {
+  height: 36px;
+}
+
+.form-button {
+  width: 100%;
+  background: rgba(223, 223, 223, 0.64);
+  font-family: "Catamaran", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-top: 10px;
+  border: none;
+}
+
+.employee-info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.employee-info-container div {
+  width: 16rem;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.label {
+  color: #98946f;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.detail-text {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #35434c;
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=employee_detail.css.map */
