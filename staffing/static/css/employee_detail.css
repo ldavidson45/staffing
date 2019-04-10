@@ -12,7 +12,7 @@
 }
 
 .new-role {
-  border: 0.3rem dashed #5e737e;
+  border: 0.3rem dashed #93a5af;
   padding: 2rem;
 }
 
@@ -21,12 +21,14 @@ select {
 }
 
 .form-button {
-  width: 100%;
   background: rgba(223, 223, 223, 0.64);
   font-family: "Catamaran", sans-serif;
   font-size: 1.2rem;
   padding: 0.5rem;
   margin-top: 10px;
   border: none;
+  width: 20%;
+  margin-left: 40%;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=employee_detail.css.map */
