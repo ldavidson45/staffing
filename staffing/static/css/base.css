@@ -8,10 +8,9 @@
 }
 
 #sidebar {
-  min-width: 10vw;
   min-height: 100vh;
-  background-color: #c9be94;
-  max-width: 250px;
+  background-color: #c9be94a3;
+  width: 230px;
 }
 
 #sidebar.active {
@@ -20,6 +19,7 @@
 
 #content {
   display: block;
-  width: 90vw;
+  width: 80vw;
+  margin: 50px;
 }
 /*# sourceMappingURL=base.css.map */
