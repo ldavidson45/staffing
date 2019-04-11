@@ -12,7 +12,7 @@ form {
   width: 50%;
   padding: 40px;
   margin-left: 20em;
-  margin-top: 1em;
+  margin-top: 3em;
   font-family: 'Work Sans', serif;
 }
 
@@ -24,6 +24,23 @@ form input {
   margin-bottom: 20px;
   border-radius: 5px;
   width: 20em;
+}
+
+form label {
+  margin-left: -71px;
+}
+
+#id_name {
+  outline: none;
+  -webkit-box-shadow: 0px 2px 23px 0px rgba(154, 154, 154, 0.75);
+          box-shadow: 0px 2px 23px 0px rgba(154, 154, 154, 0.75);
+  background-color: rgba(249, 249, 249, 0.701);
+  border: 0px solid;
+  color: #373737;
+  border-radius: 4px;
+  width: 15rem;
+  height: 40px;
+  text-align: center;
 }
 
 h1,

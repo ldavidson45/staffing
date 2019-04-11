@@ -10,6 +10,8 @@ django = "*"
 psycopg2-binary = "*"
 django-tempus-dominus = "*"
 djangorestframework = "*"
+tempus-dominus = "*"
+rest-framework = "*"
 
 [requires]
 python_version = "3.7"

@@ -39,18 +39,37 @@ form li {
 }
 
 form input {
-  border-radius: 5px;
-  border: 1px solid rgba(85, 85, 85, 0.324);
-  margin-bottom: 25px;
+  outline: none;
+  margin-bottom: 20px;
 }
 
 form label {
-  font-size: 20px;
+  margin-left: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 13px;
   color: #35434c;
+  font-family: 'Catamaran', serif;
 }
 
 form ul {
   margin: 0;
+}
+
+#id_username,
+#id_password {
+  height: 50px;
+  outline: none;
+  -webkit-box-shadow: 0px 2px 23px 0px rgba(154, 154, 154, 0.75);
+          box-shadow: 0px 2px 23px 0px rgba(154, 154, 154, 0.75);
+  background-color: rgba(249, 249, 249, 0.701);
+  border: 0px solid;
+  color: #373737;
+  border-radius: 10px;
+  width: 15rem;
+  margin-left: 10px;
+  text-align: center;
 }
 
 input {

@@ -18,7 +18,8 @@ $lightyellow: #f5edbe;
 h2 {
 	font-family: 'Catamaran', sans-serif;
 	color: #35434c;
-	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	text-align: center;
 }
 
@@ -32,34 +33,63 @@ form {
 	background-color: rgba(255, 255, 255, 0.749);
 	box-shadow: 0px 2px 23px 0px rgba(128, 128, 128, 0.75);
 	margin: auto;
-	margin-top: 6em;
-	width: 50%;
+	margin-top: 4em;
+	width: 30%;
+	height: 70%;
 	padding: 10px;
 	text-align: center;
-	width: fit-content;
-	border-radius: 5px;
+	border-radius: 20px;
 	font-family: 'Catamaran', serif;
 	li {
 		list-style-type: none;
 	}
 	input {
-		border-radius: 5px;
-		border: 1px solid rgba(85, 85, 85, 0.324);
+		outline: none;
+		margin-bottom: 20px;
 	}
 	label {
-		font-size: 20px;
+		margin-left: -168px;
+		font-size: 13px;
 		color: $darkblue;
+		font-family: 'Catamaran', serif;
 	}
 	ul {
 		margin: 0;
 	}
 }
 
+.form-input {
+	height: 50px;
+	outline: none;
+	box-shadow: 0px 2px 23px 0px rgba(154, 154, 154, 0.75);
+	background-color: rgba(249, 249, 249, 0.701);
+	border: 0px solid;
+	color: rgb(55, 55, 55);
+	border-radius: 10px;
+	width: 15rem;
+	margin-left: 10px;
+	text-align: center;
+}
+
+#id_password1,
+#id_password2 {
+	height: 50px;
+	outline: none;
+	box-shadow: 0px 2px 23px 0px rgba(154, 154, 154, 0.75);
+	background-color: rgba(249, 249, 249, 0.701);
+	border: 0px solid;
+	color: rgb(55, 55, 55);
+	border-radius: 10px;
+	width: 15rem;
+	margin-left: 10px;
+	text-align: center;
+}
+
 button {
 	font-family: 'Catamaran', serif;
 	border-radius: 4px;
 	font-size: 15px;
-	background-color: rgba(85, 85, 85, 0.187);
+	background-color: rgba(85, 85, 85, 0.53);
 }
 
 a {

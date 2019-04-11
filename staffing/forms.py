@@ -12,12 +12,15 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm):
         model = CustomUser
-        fields = ("first_name", "last_name", 'username', 'email', ) 
+        fields = ("first_name", "last_name", 'username', 'email', 'password1', 'password2' ) 
         widgets = {
-            'first_name': forms.TextInput(attrs={'placeholder': 'First Name'}),
-            'last_name': forms.TextInput(attrs={'placeholder': 'Last Name'}),
-            'username': forms.TextInput(attrs={'placeholder': 'Username'}),
-            'email': forms.TextInput(attrs={'placeholder': 'Email Address'}),
+            'first_name': forms.TextInput(attrs={'placeholder': 'First Name','size': 20, 'class': 'form-input'}),
+            'last_name': forms.TextInput(attrs={'placeholder': 'Last Name','size': 20, 'class': 'form-input'}),
+            'username': forms.TextInput(attrs={'placeholder': 'Username','size': 20, 'class': 'form-input'}, ),
+            'email': forms.TextInput(attrs={'placeholder': 'Email Address',  'class': 'form-input'}),
+            'password': forms.TextInput(attrs={'placeholder': 'password',  'class': 'password-input'}),
+            'password': forms.TextInput(attrs={'placeholder': 'password',  'class': 'password-input'}),
+
         }
 
 class CustomUserChangeForm(UserChangeForm):
@@ -31,7 +34,7 @@ class CompanyForm(forms.ModelForm):
         model = Company
         fields = ('name',)
         widgets = {
-            'name': forms.TextInput(attrs={'placeholder': 'Company Name'})
+            'name': forms.TextInput(attrs={'placeholder': 'Company Name', 'class':'form-input'})
         }
 
             
@@ -45,6 +48,11 @@ class EmployeeForm(forms.ModelForm):
     class Meta:
         model = Employee
         fields = ('name', 'role', 'status')
+        widgets = {
+            'name': forms.TextInput(attrs={'placeholder': 'Name', 'class':'form-input'}),
+            'role': forms.TextInput(attrs={'placeholder': 'Role', 'class':'form-input'}),
+            # 'status': forms.TextInput(attrs={'placeholder': 'Company Name', 'class':'form-input'})
+        }
 
 class RoleLogForm(forms.ModelForm):
 
