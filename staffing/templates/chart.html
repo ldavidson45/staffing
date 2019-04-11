@@ -19,8 +19,26 @@
             datasets: [{
                 label: "# of Votes",
                 data: defaultdata,
-              }]
-            }
+                backgroundColor: '#D6E9C6' // green
+
+              },
+               { label: "Dataset2",
+               data: defaultdata,
+               backgroundColor: '#FAEBCC' // yellow
+
+              }
+              ]
+            },
+            options: {
+        scales: {
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        }
+    }
           })
       },
     error: function(error_data) {
