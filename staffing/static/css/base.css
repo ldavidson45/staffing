@@ -28,7 +28,7 @@
 }
 
 #sidebar h1 {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   letter-spacing: 25px;
 }
 
@@ -45,5 +45,10 @@ a {
 
 .active {
   color: green;
+}
+
+.dashboard-chart-container {
+  width: 20rem;
+  height: 10rem;
 }
 /*# sourceMappingURL=base.css.map */
