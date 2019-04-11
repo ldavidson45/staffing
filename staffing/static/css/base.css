@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:300|Neuton|Work+Sans:300");
+@import url("https://fonts.googleapis.com/css?family=Istok+Web|Rajdhani|Rubik|Source+Code+Pro|Titillium+Web|Ubuntu");
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8,18 +10,57 @@
 }
 
 #sidebar {
-  min-width: 10vw;
-  min-height: 100vh;
-  background-color: #c9be94;
-  max-width: 250px;
+  height: 100%;
+  /* Full-height: remove this if you want "auto" height */
+  width: 160px;
+  /* Set the width of the sidebar */
+  position: fixed;
+  /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #111;
+  /* Black */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  padding-top: 20px;
+  background: lightgray;
+  background: linear-gradient(262deg, lightgray 59%, #fbfbfb 100%);
+  width: 280px;
 }
 
-#sidebar.active {
-  margin-left: -250px;
+#sidebar li {
+  list-style-type: none;
+  margin-top: 15px;
+}
+
+#sidebar a {
+  text-decoration: none;
+  color: grey;
+  padding: 14px;
+}
+
+#sidebar h1 {
+  font-family: "Rajdhani", sans-serif;
+  letter-spacing: 25px;
+  margin-bottom: 60px;
 }
 
 #content {
   display: block;
-  width: 90vw;
+  width: 80vw;
+  margin-left: 310px;
+  margin-top: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+.active {
+  color: green;
 }
 /*# sourceMappingURL=base.css.map */

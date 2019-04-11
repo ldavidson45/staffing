@@ -12,7 +12,13 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta(UserCreationForm):
         model = CustomUser
-        fields = ("first_name", "last_name", 'username', 'email', )
+        fields = ("first_name", "last_name", 'username', 'email', ) 
+        widgets = {
+            'first_name': forms.TextInput(attrs={'placeholder': 'First Name'}),
+            'last_name': forms.TextInput(attrs={'placeholder': 'Last Name'}),
+            'username': forms.TextInput(attrs={'placeholder': 'Username'}),
+            'email': forms.TextInput(attrs={'placeholder': 'Email Address'}),
+        }
 
 class CustomUserChangeForm(UserChangeForm):
 
@@ -24,6 +30,11 @@ class CompanyForm(forms.ModelForm):
     class Meta:
         model = Company
         fields = ('name',)
+        widgets = {
+            'name': forms.TextInput(attrs={'placeholder': 'Company Name'})
+        }
+
+            
 
 class RoleTypeForm(forms.ModelForm):
     class Meta:
@@ -43,7 +54,7 @@ class RoleLogForm(forms.ModelForm):
         widgets = {
             'start_date': DatePicker(attrs={
                 'append': 'fa fa-calendar',
-                'data-target': '#datetimepicker4'}), 
+                'data-target': '#datetimepicker4'}),
             'end_date': DatePicker(attrs={'append': 'fa fa-calendar'})
             }
 

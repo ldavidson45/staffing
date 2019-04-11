@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+<script>
+  {% block jquery %}
+  var endpoint = "/api/chart/data/";
+  var defaultdata = []
+  var labels=[]
+  $.ajax({
+    method: "GET",
+    url: endpoint,
+    success: function(data) {
+      console.log(data.labels);
+      labels = data.labels;
+      defaultdata = data.default;
+      var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+          type: "bar",
+          data: data,
+          options: {
+            maintainAspectRatio: true,
+            responsive: false,
+            scales: {
+            xAxes: [{
+                stacked: true
+            }],
+            yAxes: [{
+                stacked: true
+            }]
+        }
+    }
+          })
+      },
+    error: function(error_data) {
+      console.log("error");
+      console.log(error_data);
+    }
+  });
+
+  {% endblock %}
+</script>
+
+{% block content %}
+
+  <div class="dashboard-chart-container" url-endpoint='{% url "api-data" %}'>
+    <h1>Employee Stats</h1>
+
+    <canvas id="myChart" style="height:50vh; width:70vw"></canvas>
+  </div>
+</div>
+
+{% endblock content %}

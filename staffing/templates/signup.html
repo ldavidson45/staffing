@@ -6,17 +6,19 @@
 {% load static %}
 
 <div class="wrapper">
-<h2>Sign up</h2>
+<h1 class="brand">TrACKR<h1>
 <form action="{% url 'signup' %}" method="post" >
   {% csrf_token %}
-
+<h2>Sign up</h2>
   <ul>
     {% for field in form.visible_fields %}
-    <li>{{ field.label_tag }} {{ field }}</li>
+    <li>{{ field }}</li>
     {% endfor %}
   </ul>
+ 
+  <button type="submit">Submit</button>
   <br>
-  <button type="submit">Sign up</button>
+  <a href="/login/">Or Login as Exisiting User<a>
 </form>
 
 </div>
