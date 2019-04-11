@@ -130,7 +130,6 @@ class ChartData(APIView):
     permission_classes = []
     def get(self, request, format=None):
         datasets = get_roles_count()
-        print(datasets)
         labels = get_months_str()
         default = []
         data = {
