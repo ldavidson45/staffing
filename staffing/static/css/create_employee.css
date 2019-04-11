@@ -21,9 +21,26 @@ form li {
 }
 
 form input {
+  outline: none;
   margin-bottom: 20px;
   border-radius: 5px;
   width: 20em;
+}
+
+#id_name,
+#id_role,
+#id_status {
+  outline: none;
+  -webkit-box-shadow: 0px 2px 23px 0px rgba(154, 154, 154, 0.75);
+          box-shadow: 0px 2px 23px 0px rgba(154, 154, 154, 0.75);
+  background-color: rgba(249, 249, 249, 0.701);
+  border: 0px solid;
+  color: #373737;
+  border-radius: 4px;
+  width: 15rem;
+  height: 40px;
+  margin-left: 10px;
+  text-align: center;
 }
 
 h1,

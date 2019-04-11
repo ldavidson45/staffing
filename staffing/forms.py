@@ -34,7 +34,7 @@ class CompanyForm(forms.ModelForm):
         model = Company
         fields = ('name',)
         widgets = {
-            'name': forms.TextInput(attrs={'placeholder': 'Company Name'})
+            'name': forms.TextInput(attrs={'placeholder': 'Company Name', 'class':'form-input'})
         }
 
             
@@ -48,6 +48,11 @@ class EmployeeForm(forms.ModelForm):
     class Meta:
         model = Employee
         fields = ('name', 'role', 'status')
+        widgets = {
+            'name': forms.TextInput(attrs={'placeholder': 'Name', 'class':'form-input'}),
+            'role': forms.TextInput(attrs={'placeholder': 'Role', 'class':'form-input'}),
+            # 'status': forms.TextInput(attrs={'placeholder': 'Company Name', 'class':'form-input'})
+        }
 
 class RoleLogForm(forms.ModelForm):
 

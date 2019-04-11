@@ -10,9 +10,11 @@
 }
 
 #sidebar {
+  -webkit-clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 100%, 0 0);
   height: 100%;
   /* Full-height: remove this if you want "auto" height */
-  width: 160px;
+  width: 309px;
   /* Set the width of the sidebar */
   position: fixed;
   /* Fixed Sidebar (stay in place on scroll) */
@@ -28,7 +30,6 @@
   padding-top: 20px;
   background: lightgray;
   background: linear-gradient(262deg, lightgray 59%, #fbfbfb 100%);
-  width: 280px;
 }
 
 #sidebar li {
@@ -43,7 +44,7 @@
 }
 
 #sidebar h1 {
-  font-family: "Rajdhani", sans-serif;
+  font-family: 'Rajdhani', sans-serif;
   letter-spacing: 25px;
   margin-bottom: 60px;
 }
@@ -51,7 +52,7 @@
 #content {
   display: block;
   width: 80vw;
-  margin-left: 310px;
+  margin-left: 27%;
   margin-top: 2rem;
 }
 
