@@ -65,7 +65,9 @@ a {
 }
 
 .dashboard-chart-container {
-  width: 20rem;
-  height: 10rem;
+  width: 55vw;
+  height: 40vh;
+  display: block;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=base.css.map */

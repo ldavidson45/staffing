@@ -22,6 +22,4 @@ urlpatterns = [
     url('^api/data/<int:pk>', views.get_data, name='api-data'),
     url('api/chart/data/', views.ChartData.as_view()),
     path("", include(router.urls))
-
-
 ]
