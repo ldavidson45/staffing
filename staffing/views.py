@@ -127,12 +127,13 @@ class ChartData(APIView):
     permission_classes = []
     labels=[]
     def get(self, request, format=None):
-        something = Role_Type.objects.all()
-        labels = [role.title for role in something]
-        default = [2, 4, 6]
+        test = get_roles()
+        print(test.keys())
+        labels = test.keys()
+        default = []
         data = {
             "labels": labels,
-            "default": default
+            "default": test.values()
 
         }
         return Response(data)
