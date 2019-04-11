@@ -10,8 +10,8 @@
 }
 
 #sidebar {
-  -webkit-clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 100%, 0 0);
-          clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 100%, 0 0);
+  -webkit-clip-path: polygon(100% 0, 100% 73%, 50% 100%, 0 100%, 0 0);
+          clip-path: polygon(100% 0, 100% 73%, 50% 100%, 0 100%, 0 0);
   height: 100%;
   /* Full-height: remove this if you want "auto" height */
   width: 309px;
