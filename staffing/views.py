@@ -5,13 +5,15 @@ from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib import messages
 from .models import Company, Profile, Role_Type, Employee, Role_Log, CustomUser, Profile
-from .script import get_employee_roles, get_active_employees
+from .script import get_employee_roles, get_roles
 from django.shortcuts import render_to_response
 from django.views.generic import View
 from django.http import JsonResponse
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from .serializers import RoleSerializer
+from rest_framework import viewsets
 
 # Create your views here.
 
@@ -123,8 +125,10 @@ def get_data(request, *args, **kwargs):
 class ChartData(APIView):
     authentication_classes = []
     permission_classes = []
+    labels=[]
     def get(self, request, format=None):
-        labels=["Jan", "Feb", "Mar"]
+        something = Role_Type.objects.all()
+        labels = [role.title for role in something]
         default = [2, 4, 6]
         data = {
             "labels": labels,
@@ -132,3 +136,7 @@ class ChartData(APIView):
 
         }
         return Response(data)
+
+class ChartTest(viewsets.ModelViewSet):
+    queryset = Role_Type.objects.all()
+    serializer_class = RoleSerializer
