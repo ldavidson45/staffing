@@ -70,7 +70,13 @@ a {
 
 .dashboard-chart-container {
   width: 55vw;
-  height: 40vh;
+  height: 50vh;
   display: block;
   margin: 0 auto;
+  position: relative;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 10px;
 }
