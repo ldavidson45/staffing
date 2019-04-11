@@ -45,6 +45,7 @@ def create_company(request, pk):
     return render(request, 'create_company.html', {'form': form, 'user':user})
 
 def company_detail(request, pk):
+    user = request.user.id
     company = Company.objects.get(pk=pk)
     form = RoleTypeForm(request.POST)
     if form.is_valid():
@@ -138,7 +139,3 @@ class ChartData(APIView):
 
         }
         return Response(data)
-
-class ChartTest(viewsets.ModelViewSet):
-    queryset = Role_Type.objects.all()
-    serializer_class = RoleSerializer

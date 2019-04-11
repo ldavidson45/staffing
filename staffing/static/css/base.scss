@@ -89,3 +89,22 @@ a {
 .section-subheading {
   text-align: center;
 }
+
+.company-info {
+  margin-left: 3rem;
+}
+
+.roles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.role-box {
+  color: $darkblue;
+  margin: 3%;
+  width: 15vw;
+  height: 15vh;
+  padding: 1%;
+  background-color: rgba(255, 255, 255, 0.749);
+  box-shadow: 0px 2px 23px 0px rgba(128, 128, 128, 0.75);
+}

@@ -54,6 +54,7 @@ class EmployeeForm(forms.ModelForm):
             # 'status': forms.TextInput(attrs={'placeholder': 'Company Name', 'class':'form-input'})
         }
 
+
 class RoleLogForm(forms.ModelForm):
 
     class Meta:

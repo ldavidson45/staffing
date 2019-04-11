@@ -4,8 +4,8 @@ from . import views
 from django.conf.urls import url
 from rest_framework import routers
 
-router = routers.DefaultRouter()
-router.register("roles", views.ChartTest)
+# router = routers.DefaultRouter()
+# router.register("roles", views.ChartTest)
 
 urlpatterns = [
     path('signup/', views.sign_up, name='signup'),
@@ -21,5 +21,4 @@ urlpatterns = [
     url(r'^$', views.Home_View.as_view(), name='home'),
     url('^api/data/<int:pk>', views.get_data, name='api-data'),
     url('api/chart/data/', views.ChartData.as_view()),
-    path("", include(router.urls))
 ]
