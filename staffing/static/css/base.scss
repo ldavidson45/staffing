@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Catamaran:300|Neuton|Work+Sans:300');
-@import url('https://fonts.googleapis.com/css?family=Istok+Web|Rajdhani|Rubik|Source+Code+Pro|Titillium+Web|Ubuntu');
+@import url("https://fonts.googleapis.com/css?family=Catamaran:300|Neuton|Work+Sans:300");
+@import url("https://fonts.googleapis.com/css?family=Istok+Web|Rajdhani|Rubik|Source+Code+Pro|Titillium+Web|Ubuntu");
 // font-family: 'Ubuntu', sans-serif;
 // font-family: 'Titillium Web', sans-serif;
 // font-family: 'Rubik', sans-serif;
@@ -7,7 +7,7 @@
 // font-family: 'Rajdhani', sans-serif;
 // font-family: 'Istok Web', sans-serif;
 
-$mainfont: 'Catamaran', sans-serif;
+$mainfont: "Catamaran", sans-serif;
 $darkblue: #35434c;
 $darkgreen: #465c4b;
 $yellow: #98946f;
@@ -15,79 +15,77 @@ $khaki: #c9be94;
 $lightyellow: #f5edbe;
 
 .brand-title {
-	font-size: 50px;
+  font-size: 50px;
 }
 
 .wrapper {
-	display: flex;
-	align-items: stretch;
+  display: flex;
+  align-items: stretch;
 }
 
 #sidebar {
-	clip-path: polygon(
-		100% 0,
-		100% 73%,
-		50% 100%,
-		0 100%,
-		0 0
-	);
+  clip-path: polygon(100% 0, 100% 73%, 50% 100%, 0 100%, 0 0);
 
-	height: 100%; /* Full-height: remove this if you want "auto" height */
-	width: 309px; /* Set the width of the sidebar */
-	position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-	z-index: 1; /* Stay on top */
-	top: 0; /* Stay at the top */
-	left: 0;
-	background-color: #111; /* Black */
-	overflow-x: hidden; /* Disable horizontal scroll */
-	padding-top: 20px;
-	background: rgb(211, 211, 211);
-	background: linear-gradient(
-		262deg,
-		rgba(211, 211, 211, 1) 59%,
-		rgba(251, 251, 251, 1) 100%
-	);
-	li {
-		list-style-type: none;
-		margin-top: 15px;
-	}
-	a {
-		text-decoration: none;
-		color: grey;
-		padding: 14px;
-	}
-	h1 {
-		font-family: 'Rajdhani', sans-serif;
-		letter-spacing: 25px;
-		margin-bottom: 60px;
-	}
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 17rem; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  background: rgb(211, 211, 211);
+  background: linear-gradient(
+    262deg,
+    rgba(211, 211, 211, 1) 59%,
+    rgba(251, 251, 251, 1) 100%
+  );
+  li {
+    list-style-type: none;
+    margin-top: 15px;
+  }
+  a {
+    text-decoration: none;
+    color: grey;
+    padding: 14px;
+  }
+  h1 {
+    font-family: "Rajdhani", sans-serif;
+    letter-spacing: 25px;
+    margin-bottom: 60px;
+  }
 }
 
 #content {
-	display: block;
-	width: 80vw;
-	margin-left: 27%;
-	margin-top: 2rem;
+  display: block;
+  width: 80vw;
+  margin-left: 17rem;
+  margin-top: 2rem;
 }
 
 a {
-	text-decoration: none;
-	color: grey;
+  text-decoration: none;
+  color: grey;
 }
 
 .active {
-	color: green;
+  color: green;
 }
 
 .dashboard-chart-container {
-	width: 55vw;
-	height: 50vh;
-	display: block;
-	margin: 0 auto;
-	position: relative;
+  width: 55vw;
+  height: 50vh;
+  display: block;
+  margin: 0 auto;
+  position: relative;
 }
 
 .section-heading {
-	text-align: center;
-	margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.section-subheading {
+  text-align: center;
 }
