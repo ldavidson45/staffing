@@ -8,27 +8,13 @@
     method: "GET",
     url: endpoint,
     success: function(data) {
-      console.log(data);
+      console.log(data.labels);
       labels = data.labels;
       defaultdata = data.default;
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
           type: "bar",
-          data: {
-            labels: labels,
-            datasets: [{
-                label: "# of Votes",
-                data: defaultdata,
-                backgroundColor: '#D6E9C6' // green
-
-              },
-               { label: "Dataset2",
-               data: defaultdata,
-               backgroundColor: '#FAEBCC' // yellow
-
-              }
-              ]
-            },
+          data: data,
             options: {
         scales: {
             xAxes: [{
