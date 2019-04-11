@@ -13,12 +13,12 @@ class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm):
         model = CustomUser
         fields = ("first_name", "last_name", 'username', 'email', ) 
-        widgets = {
-            'first_name': forms.TextInput(attrs={'placeholder': 'First Name'}),
-            'last_name': forms.TextInput(attrs={'placeholder': 'Last Name'}),
-            'username': forms.TextInput(attrs={'placeholder': 'Username'}),
-            'email': forms.TextInput(attrs={'placeholder': 'Email Address'}),
-        }
+        # widgets = {
+        #     'first_name': forms.TextInput(attrs={'placeholder': 'First Name','size': 20}),
+        #     'last_name': forms.TextInput(attrs={'placeholder': 'Last Name','size': 20}),
+        #     'username': forms.TextInput(attrs={'placeholder': 'Username','size': 20}),
+        #     'email': forms.TextInput(attrs={'placeholder': 'Email Address'}),
+        # }
 
 class CustomUserChangeForm(UserChangeForm):
 
