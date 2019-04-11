@@ -1,19 +1,34 @@
 {% extends 'base.html' %}
 <script>
   {% block jquery %}
-  var endpoint = "/api/data/";
-
+  var endpoint = "/api/chart/data/";
+  var defaultdata = []
+  var labels=[]
   $.ajax({
     method: "GET",
     url: endpoint,
     success: function(data) {
       console.log(data);
-    },
+      labels = data.labels;
+      defaultdata = data.default;
+      var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: labels,
+            datasets: [{
+                label: "# of Votes",
+                data: defaultdata,
+              }]
+            }
+          })
+      },
     error: function(error_data) {
       console.log("error");
       console.log(error_data);
     }
   });
+
   {% endblock %}
 </script>
 
@@ -22,6 +37,8 @@
 <div class="row">
   <div class="col-sm-12" url-endpoint='{% url "api-data" %}'>
     <h1>Hello World</h1>
+
+    <canvas id="myChart" width="400" height="400"></canvas>
   </div>
 </div>
 

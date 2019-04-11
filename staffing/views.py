@@ -4,15 +4,14 @@ from django.contrib.auth import login, authenticate
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib import messages
-from .models import Company, Profile, Role_Type, Employee, Role_Log
-from .script import get_employee_roles
+from .models import Company, Profile, Role_Type, Employee, Role_Log, CustomUser, Profile
+from .script import get_employee_roles, get_active_employees
 from django.shortcuts import render_to_response
 from django.views.generic import View
 from django.http import JsonResponse
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -122,12 +121,14 @@ def get_data(request, *args, **kwargs):
 
 
 class ChartData(APIView):
-
     authentication_classes = []
     permission_classes = []
-
     def get(self, request, format=None):
+        labels=["Jan", "Feb", "Mar"]
+        default = [2, 4, 6]
         data = {
+            "labels": labels,
+            "default": default
 
         }
         return Response(data)
