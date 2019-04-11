@@ -63,4 +63,9 @@ a {
 .active {
   color: green;
 }
+
+.dashboard-chart-container {
+  width: 20rem;
+  height: 10rem;
+}
 /*# sourceMappingURL=base.css.map */

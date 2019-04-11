@@ -15,10 +15,8 @@
       var myChart = new Chart(ctx, {
           type: "bar",
           data: data,
-          options: {
-            maintainAspectRatio: true,
-            responsive: false,
-            scales: {
+            options: {
+        scales: {
             xAxes: [{
                 stacked: true
             }],
@@ -41,9 +39,9 @@
 {% block content %}
 
   <div class="dashboard-chart-container" url-endpoint='{% url "api-data" %}'>
-    <h1>Employee Stats</h1>
+    <h1>Hello World</h1>
 
-    <canvas id="myChart" style="height:50vh; width:70vw"></canvas>
+    <canvas id="myChart" ></canvas>
   </div>
 </div>
 
