@@ -58,3 +58,42 @@ def get_roles_count():
     return month_datasets
 
 
+#Get chart data pseudocode:
+#get month/year from the past 12 months
+#get all role types
+#for each role type, get all role log
+#start = start_date
+#if end_date is  "none or null"
+#end = today's month, year
+#else, end = end_date
+#for each date grouping
+#check if month/year falls between start and end of the role log
+#
+
+#for each role log
+
+# def get_roles_count():
+#     roles = Role_Type.objects.all()
+#     role_logs = Role_Log.objects.all()
+#     months = get_months()
+#     month_datasets = []
+#     colors =['#D6E9C6', '#FAEBCC','#ebccfa', '#20c72b','#20c7bb','#c76320']
+#     i = 0
+#     for role in roles:
+#         data_dict={}
+#         data_dict['label'] = role.title
+#         data_dict['data'] = []
+#         data_dict['backgroundColor'] = colors[i]
+#         i+= 1
+#         for month in months:
+#             role_log = role_logs.filter(role_type__title= role)
+#             start = role_log.start_date
+#             end = role_log.end_date
+#             month_range = (start.month, end.month)
+#             if month[0] and month[1] 
+
+#             count = role_logs.filter(role_type__title= role, start_date__month=month[0], start_date__year=month[1]).count()
+#             data_dict['data'].append(count)
+#         month_datasets.append(data_dict)
+#     print(month_datasets)
+#     return month_datasets

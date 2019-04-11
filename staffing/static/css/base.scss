@@ -69,6 +69,14 @@ a {
 }
 
 .dashboard-chart-container {
-  width: 20rem;
-  height: 10rem;
+  width: 55vw;
+  height: 50vh;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 10px;
 }

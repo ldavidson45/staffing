@@ -17,7 +17,7 @@
           data: data,
           options: {
             maintainAspectRatio: true,
-            responsive: false,
+            responsive: true,
             scales: {
             xAxes: [{
                 stacked: true
@@ -38,11 +38,9 @@
 </script>
 
 {% block content %}
-
+  <h1 class="section-heading">Employee Stats</h1>
   <div class="dashboard-chart-container" url-endpoint='{% url "api-data" %}'>
-    <h1>Employee Stats</h1>
-
-    <canvas id="myChart" style="height:50vh; width:70vw"></canvas>
+    <canvas id="myChart"></canvas>
   </div>
 </div>
 
