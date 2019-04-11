@@ -4,6 +4,7 @@ from django.contrib.auth import login, authenticate
 from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib import messages
+<<<<<<< HEAD
 from .models import Company, Profile, Role_Type, Employee, Role_Log, CustomUser, Profile
 from .script import get_employee_roles, get_roles_count, get_months_str
 from django.shortcuts import render_to_response
@@ -14,6 +15,11 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from .serializers import RoleSerializer
 from rest_framework import viewsets
+=======
+from .models import Company, Profile, Role_Type, Employee, Role_Log
+from .script import get_employee_roles
+from django.shortcuts import render_to_response
+>>>>>>> 36a3eb354287d343104bfd1801e4dc57aa7cfee0
 
 # Create your views here.
 
