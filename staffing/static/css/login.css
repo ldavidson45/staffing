@@ -42,6 +42,7 @@ form input {
   border-radius: 5px;
   border: 1px solid rgba(85, 85, 85, 0.324);
   margin-bottom: 25px;
+  outline: none;
 }
 
 form label {
@@ -51,6 +52,10 @@ form label {
 
 form ul {
   margin: 0;
+}
+
+form #id_username {
+  outline-color: green;
 }
 
 input {
