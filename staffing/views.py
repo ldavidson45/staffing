@@ -5,7 +5,7 @@ from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib import messages
 from .models import Company, Profile, Role_Type, Employee, Role_Log, CustomUser, Profile
-from .script import get_employee_roles, get_roles_count
+from .script import get_employee_roles, get_roles_count, get_list_of_months
 from django.shortcuts import render_to_response
 from django.views.generic import View
 from django.http import JsonResponse
@@ -125,10 +125,9 @@ def get_data(request, *args, **kwargs):
 class ChartData(APIView):
     authentication_classes = []
     permission_classes = []
-    labels=[]
     def get(self, request, format=None):
         test = get_roles_count()
-        labels = test.keys()
+        labels = get_list_of_months()
         default = []
         data = {
             "labels": labels,

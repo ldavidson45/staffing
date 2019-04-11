@@ -3,6 +3,7 @@ from django.http import JsonResponse
 from django.db.models import Count
 import datetime
 from django.db.models.functions import TruncMonth
+from calendar import monthrange
 
 from collections import OrderedDict
 #Return all of the roles the user has:
@@ -28,13 +29,14 @@ def get_roles_count():
 
 def get_list_of_months():
     i = 0
-    today = datetime.date.today()
+    today = datetime.datetime.today()
     month_year_list = []
     while i < 365:
-        date = today - datetime.timedelta(days=i)
+        date = today - datetime.timedelta(i)
         month_year_list.append(date.strftime('%b %Y'))
         i += 30
-    return month_year_list
+    print(today.strftime("%b %Y"))
+    return reversed(month_year_list)
 
 
 # {
