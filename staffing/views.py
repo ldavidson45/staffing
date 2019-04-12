@@ -9,14 +9,15 @@ from .script import get_employee_roles, get_roles_count, get_months_str
 from django.shortcuts import render_to_response
 from django.views.generic import View
 from django.http import JsonResponse
-
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .serializers import RoleSerializer
 from rest_framework import viewsets
 from .models import Company, Profile, Role_Type, Employee, Role_Log
 from .script import get_employee_roles
-from django.shortcuts import render_to_response
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 # Create your views here.
 
@@ -32,6 +33,7 @@ def sign_up(request):
         form = CustomUserCreationForm()
     return render(request, 'signup.html', {'form': form})
 
+@login_required
 def create_company(request, pk):
     user = request.user
     if request.method == 'POST':
@@ -44,6 +46,7 @@ def create_company(request, pk):
         form = CompanyForm()
     return render(request, 'create_company.html', {'form': form, 'user':user})
 
+@login_required
 def company_detail(request, pk):
     user = request.user.id
     company = Company.objects.get(pk=pk)
@@ -58,6 +61,7 @@ def company_detail(request, pk):
         form = RoleTypeForm()
     return render(request, 'company_detail.html', {'company': company, 'form': form, })
 
+@login_required
 def employee_list(request):
     pk = request.user.profile.company.pk
     company = Company.objects.get(pk=pk)
@@ -67,6 +71,7 @@ def employee_list(request):
 
     return render(request, 'employee_list.html', {'active': active_employees, 'inactive': inactive_employees})
 
+@login_required
 def create_employee(request):
     pk = request.user.profile.company.pk
     company = Company.objects.get(pk=pk)
@@ -81,6 +86,7 @@ def create_employee(request):
         form = EmployeeForm()
     return render(request, 'create_employee.html', {'form': form})
 
+@login_required
 def employee_detail(request, pk):
     employee = Employee.objects.select_related().get(pk=pk)
     roles = get_employee_roles(employee)
@@ -99,13 +105,14 @@ def employee_detail(request, pk):
 
     return render(request, 'employee_detail.html', {'form': form, 'roles': roles, 'employee': employee})
 
-
+@login_required
 def role_log_delete(request, pk):
     role = Role_Log.objects.get(id=pk)
     employee = role.employee
     Role_Log.objects.get(id=pk).delete()
     return redirect('employee_detail', pk=employee.pk)
 
+@login_required
 def employee_edit(request, pk):
     employee = Employee.objects.get(pk=pk)
     if request.method == "POST":
@@ -117,10 +124,11 @@ def employee_edit(request, pk):
         form = EmployeeForm(instance=employee)
     return render(request, 'create_employee.html', {"form": form})
 
-class Home_View(View):
+class Home_View(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         return render(request, 'chart.html', {})
 
+@login_required
 def get_data(request, *args, **kwargs):
     data = {
         'sales': 200,
