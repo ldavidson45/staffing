@@ -59,10 +59,13 @@ def company_detail(request, pk):
     return render(request, 'company_detail.html', {'company': company, 'form': form, })
 
 def employee_list(request):
-    # pk = request.user.profile.company.pk
-    company = Company.objects.get(pk=1)
-    employees = Employee.objects.all().filter(company=company)
-    return render(request, 'employee_list.html', {'employees': employees})
+    pk = request.user.profile.company.pk
+    company = Company.objects.get(pk=pk)
+    active_employees = Employee.objects.all().filter(company=company,status='active')
+    inactive_employees = Employee.objects.all().filter(company=company,status='inactive')
+
+
+    return render(request, 'employee_list.html', {'active': active_employees, 'inactive': inactive_employees})
 
 def create_employee(request):
     pk = request.user.profile.company.pk

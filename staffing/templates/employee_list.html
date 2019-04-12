@@ -12,7 +12,11 @@
       <tr class="thead-light">
         <th>Name</th>
         <th>Current Role</th>
-        <th>Start Date</th>
+      </tr>
+      {% for employee in active %}
+      <tr>
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.role }}</td>
       </tr>
     </table>
   </section>
