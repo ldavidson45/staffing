@@ -92,19 +92,28 @@ a {
 
 .company-info {
   margin-left: 3rem;
+  width: 30rem;
+  margin: 2rem auto;
 }
 
-.roles {
+.company-name {
+  margin-bottom: 3rem;
+}
+
+.one-input-form {
   display: flex;
-  flex-wrap: wrap;
+  button {
+    background: rgba(223, 223, 223, 0.64);
+    font-family: "Catamaran", sans-serif;
+    font-size: 1.2rem;
+    border: none;
+    width: 20%;
+    margin-left: 1rem;
+    height: 2rem;
+    border-radius: 5px;
+  }
 }
 
-.role-box {
-  color: $darkblue;
-  margin: 3%;
-  width: 15vw;
-  height: 15vh;
-  padding: 1%;
-  background-color: rgba(255, 255, 255, 0.749);
-  box-shadow: 0px 2px 23px 0px rgba(128, 128, 128, 0.75);
+.small-title {
+  margin-bottom: 4rem;
 }
