@@ -125,6 +125,8 @@ def employee_edit(request, pk):
     return render(request, 'create_employee.html', {"form": form})
 
 class Home_View(LoginRequiredMixin, View):
+    login_url = '/login/'
+    redirect_field_name = 'redirect_to'
     def get(self, request, *args, **kwargs):
         return render(request, 'chart.html', {})
 
@@ -137,7 +139,9 @@ def get_data(request, *args, **kwargs):
     return JsonResponse(data)
 
 
-class ChartData(APIView):
+class ChartData(LoginRequiredMixin, APIView):
+    login_url = '/login/'
+    redirect_field_name = 'redirect_to'
     authentication_classes = []
     permission_classes = []
     def get(self, request, format=None):
