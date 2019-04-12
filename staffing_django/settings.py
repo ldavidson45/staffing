@@ -27,7 +27,9 @@ SECRET_KEY = '3z^oh!%3*7z4&65_l7a(&gjj)-@7#vi$k4z0f*j-u9x(1j#(hz'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'tracker-solutions.herokuapp.com'
+    'tracker-solutions.herokuapp.com',
+    'localhost',
+    '127.0.0.1'
 ]
 
 # Application definition
@@ -66,12 +68,7 @@ MIDDLEWARE = [
 
 ]
 
-MIDDLEWARE_CLASSES = (
-    # Simplified static file serving.
-    # https://warehouse.python.org/project/whitenoise/
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-)
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'staffing_django.urls'
 

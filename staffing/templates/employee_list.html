@@ -20,9 +20,9 @@
         </td>
         <td>{{ employee.role }}</td>
       </tr>
+      {% endfor %}
     </table>
 
-    {% endfor %}
     <table class="table" id="inactive">
       <tr class="thead-light">
         <th>Name</th>
@@ -35,9 +35,8 @@
         </td>
         <td>{{ employee.role }}</td>
       </tr>
+      {% endfor %}
     </table>
-
-    {% endfor %}
   </section>
 </section>
 {% endblock %}
