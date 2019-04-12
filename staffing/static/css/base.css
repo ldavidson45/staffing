@@ -36,9 +36,17 @@
   background: linear-gradient(262deg, lightgray 59%, #fbfbfb 100%);
 }
 
+#sidebar ul {
+  margin-top: 4rem;
+}
+
 #sidebar li {
   list-style-type: none;
-  margin-top: 15px;
+  margin-top: 2rem;
+}
+
+#sidebar a:hover {
+  color: #1752d3;
 }
 
 #sidebar a {
@@ -50,7 +58,7 @@
 #sidebar h1 {
   font-family: "Rajdhani", sans-serif;
   letter-spacing: 25px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 #content {
@@ -63,6 +71,10 @@
 a {
   text-decoration: none;
   color: grey;
+}
+
+.username {
+  text-align: center;
 }
 
 .active {

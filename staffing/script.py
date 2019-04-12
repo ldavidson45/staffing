@@ -81,7 +81,7 @@ def get_roles_count():
     dates = get_months()
     month_datasets = []
     today = datetime.datetime.today()
-    colors =['#ff513e', '#3eff8b', '#653eff', '#ffb23e', '#3eb2ff', '#9936fd', '#ff1bff']
+    colors =['#ff513e', '#3eff8b', '#653eff', '#ffb23e', '#3eb2ff', '#9936fd', '#ff1bff','#ff513e','#3eff8b','#653eff', '#ffb23e']
     i = 0
     for role in roles:
         data_dict={}

@@ -139,9 +139,8 @@ def get_data(request, *args, **kwargs):
     return JsonResponse(data)
 
 
-class ChartData(LoginRequiredMixin, APIView):
-    login_url = '/login/'
-    redirect_field_name = 'redirect_to'
+class ChartData(APIView):
+
     authentication_classes = []
     permission_classes = []
     def get(self, request, format=None):
