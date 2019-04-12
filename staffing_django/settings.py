@@ -27,8 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-CRISPY_TEMPLATE_PACK = 'boostrap3'
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'staffing',
-    'crispy_forms',
     'tempus_dominus',
     'rest_framework',
 ]
