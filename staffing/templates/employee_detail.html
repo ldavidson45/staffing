@@ -5,81 +5,89 @@
   type="text/css"
 />
 
-<section class="employee-show">
+<section class="employee-detail-page">
+<section class="employee-detail-header">
   <h2 class="employee-name">{{ employee.name }}</h2>
-  <a href="{% url 'employee_edit' pk=employee.pk %}"
-    >&nbsp;&nbsp;Edit employee info</a
-  >
-  <div class="employee-info-container">
-    <div>
-      <p class="label"><i class="fas fa-user-clock"></i>&nbsp;&nbsp;Status</p>
-      <p class="detail-text">{{ employee.status }}</p>
+</section>
+
+<section class='employee-detail-main'>
+  <section class="employee-detail-sidebar">
+    <div class="employee-detail-item">
+      <p><span class="sidebar-label">STATUS</span> {{ employee.status }}</p>
     </div>
+
     <div>
-      <p class="label">
-        <i class="fas fa-address-card"></i>&nbsp;&nbsp;Current Role
-      </p>
-      <p class="detail-text">{{ employee.role }}</p>
+      <p><span class="sidebar-label">CURRENT ROLE</span> {{ employee.role }}</p>
     </div>
-  </div>
-  <table class="table">
-    <tr>
-      <th>Start Date</th>
-      <th>End Date</th>
-      <th>Position</th>
-    </tr>
 
-    {% for role in roles %}
-    <tr>
-      <td>{{ role.start_date }}</td>
-      <td>{{ role.end_date }}</td>
-      <td>{{ role.role_type }}</td>
-      <td>
-        <a href="{% url 'role_log_delete' pk=role.pk %}"
-          ><i class="far fa-trash-alt"></i
-        ></a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      </td>
-    </tr>
-    {% endfor %}
-  </table>
+    <a href='/employee/{{employee.pk}}/edit'>Edit employee info</a>
+  </section>
 
-  <section class="new-role">
-    <h5>Add A New Role:</h5>
-    <form method="post">
-      {% csrf_token %}
+  <section class="employee-roles-container">
+    <table class="table">
+      <tr>
+        <th>Roles Held</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
 
-      <table class="table">
-        <tr>
-          <th>Start Date</th>
-          <th>End Date</th>
-          <th>Position</th>
-        </tr>
-        <tr>
-          <td>{{ form.start_date }}</td>
-          <td>{{ form.end_date }}</td>
-          <td>{{ form.role_type }}</td>
-        </tr>
-      </table>
 
-      <button type="submit" class="form-button">Save</button>
-    </form>
+      </tr>
+      {% for role in roles %}
+      <tr>
+        <td>{{ role.role_type }}</td>
+        <td>{{ role.start_date }}</td>
+        <td>to</td>
+        <td>{{ role.end_date }}</td>
+        <td>
+          <a href="{% url 'role_log_delete' pk=role.pk %}"
+            ><i class="far fa-trash-alt"></i
+          ></a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <section class="new-role">
+      <p class="small-title">Add A New Role:</p>
+      <form method="post">
+        {% csrf_token %}
+
+        <table class="table">
+          <tr>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Position</th>
+          </tr>
+          <tr>
+            <td>{{ form.start_date }}</td>
+            <td>{{ form.end_date }}</td>
+            <td>{{ form.role_type }}</td>
+          </tr>
+        </table>
+
+        <button type="submit" class="form-button">Save</button>
+      </form>
+    </section>
   </section>
 </section>
-<<<<<<< HEAD
-<script
-  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-  crossorigin="anonymous"
-></script>
-{{ form.media }}
-======= >>>>>>> 36a3eb354287d343104bfd1801e4dc57aa7cfee0
-<script>
-  $(function() {
-    $("#datetimepicker1").datetimepicker({
-      format: "MM/DD/YYYY"
-    });
-  });
-</script>
+</section>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    {{ form.media }}
+    <script>
+      $(function() {
+        $("#datetimepicker1").datetimepicker({
+          format: "MM/DD/YYYY"
+        });
+      });
+    </script>
 
-{% endblock %}
+    {% endblock %}
+  </section>
+</section>
