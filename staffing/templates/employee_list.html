@@ -8,14 +8,30 @@
   </div>
 
   <section class="main-employees-container">
-    <table class="table">
+    <table class="table" id="active">
       <tr class="thead-light">
         <th>Name</th>
         <th>Current Role</th>
       </tr>
       {% for employee in active %}
       <tr>
-        <td>{{ employee.name }}</td>
+        <td>
+          <a href="/employee/{{ employee.pk }}">{{ employee.name }}</a>
+        </td>
+        <td>{{ employee.role }}</td>
+      </tr>
+    </table>
+
+    <table class="table" id="inactive">
+      <tr class="thead-light">
+        <th>Name</th>
+        <th>Last Role</th>
+      </tr>
+      {% for employee in inactive %}
+      <tr>
+        <td>
+          <a href="/employee/{{ employee.pk }}">{{ employee.name }}</a>
+        </td>
         <td>{{ employee.role }}</td>
       </tr>
     </table>
