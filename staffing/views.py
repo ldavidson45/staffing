@@ -41,15 +41,15 @@ def create_company(request, pk):
         if form.is_valid():
             company = form.save()
             Profile.objects.filter(pk=pk).update(company=company)
-            return redirect('/')
+            return redirect('/company/')
     else:
         form = CompanyForm()
     return render(request, 'create_company.html', {'form': form, 'user':user})
 
 @login_required
-def company_detail(request, pk):
-    user = request.user.id
-    company = Company.objects.get(pk=pk)
+def company_detail(request):
+    user = request.user
+    company = user.profile.company
     form = RoleTypeForm(request.POST)
     if form.is_valid():
         role = form.save(commit=False)

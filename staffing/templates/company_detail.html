@@ -22,7 +22,7 @@
   </section>
 
   <div>
-    <h5>Add a new role</h5>
+    <h5>Add {{ company.name }}'s current roles and positions:</h5>
     <form class="one-input-form" method="POST">
       {% csrf_token %}
       {{ form.as_p }}
