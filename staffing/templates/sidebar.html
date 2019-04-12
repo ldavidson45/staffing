@@ -29,7 +29,8 @@
        <div class="sidebar-header">
            <h1 class="brand-title"><a href="/">TrACKR</a><h1>
         </div>
-        
+        {% if user.is_authenticated %}
+
         <ul class="list-styled components">
          <li>
                 <a href="/"><i class="fas fa-home"></i>&nbsp;&nbsp;&nbsp;&nbsp; Home</a>
@@ -63,6 +64,9 @@
                 <a href="/logout"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;&nbsp;&nbsp;Logout</a>
             </li>
         </ul>
+        {% else %}
+          <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>   
+        {% endif %} 
     </nav>
 
 
