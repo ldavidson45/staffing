@@ -1,0 +1,20 @@
+<link href="../static/css/employee_list.css" rel="stylesheet" />
+{% extends 'base.html' %} {% block content %}
+
+<section class="employees-list">
+  <div class="tabs-container">
+    <p>Active Employees</p>
+    <p>Former Employees</p>
+  </div>
+
+  <section class="main-employees-container">
+    <table class="table">
+      <tr class="thead-light">
+        <th>Name</th>
+        <th>Current Role</th>
+        <th>Start Date</th>
+      </tr>
+    </table>
+  </section>
+</section>
+{% endblock %}

@@ -59,10 +59,10 @@ def company_detail(request, pk):
     return render(request, 'company_detail.html', {'company': company, 'form': form, })
 
 def employee_list(request):
-    pk = request.user.profile.company.pk
-    company = Company.objects.get(pk=pk)
+    # pk = request.user.profile.company.pk
+    company = Company.objects.get(pk=1)
     employees = Employee.objects.all().filter(company=company)
-    return render(request, 'active_employee_list.html', {'employees': employees})
+    return render(request, 'employee_list.html', {'employees': employees})
 
 def create_employee(request):
     pk = request.user.profile.company.pk
