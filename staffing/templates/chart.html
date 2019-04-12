@@ -38,10 +38,9 @@
 </script>
 
 {% block content %}
-  <h1 class="section-heading">Employee Stats</h1>
-  <div class="dashboard-chart-container" url-endpoint='{% url "api-data" %}'>
-    <canvas id="myChart"></canvas>
-  </div>
+<h1 class="section-heading">Employee Stats</h1>
+<h5 class="section-subheading">Monthly Staff Makeup</h5>
+<div class="dashboard-chart-container" url-endpoint='{% url "api-data" %}'>
+  <canvas id="myChart"></canvas>
 </div>
-
 {% endblock content %}

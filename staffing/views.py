@@ -45,6 +45,7 @@ def create_company(request, pk):
     return render(request, 'create_company.html', {'form': form, 'user':user})
 
 def company_detail(request, pk):
+    user = request.user.id
     company = Company.objects.get(pk=pk)
     form = RoleTypeForm(request.POST)
     if form.is_valid():
@@ -60,8 +61,11 @@ def company_detail(request, pk):
 def employee_list(request):
     pk = request.user.profile.company.pk
     company = Company.objects.get(pk=pk)
-    employees = Employee.objects.all().filter(company=company)
-    return render(request, 'active_employee_list.html', {'employees': employees})
+    active_employees = Employee.objects.all().filter(company=company,status='active')
+    inactive_employees = Employee.objects.all().filter(company=company,status='inactive')
+
+
+    return render(request, 'employee_list.html', {'active': active_employees, 'inactive': inactive_employees})
 
 def create_employee(request):
     pk = request.user.profile.company.pk
@@ -130,7 +134,6 @@ class ChartData(APIView):
     permission_classes = []
     def get(self, request, format=None):
         datasets = get_roles_count()
-        print(datasets)
         labels = get_months_str()
         default = []
         data = {
@@ -139,7 +142,3 @@ class ChartData(APIView):
 
         }
         return Response(data)
-
-class ChartTest(viewsets.ModelViewSet):
-    queryset = Role_Type.objects.all()
-    serializer_class = RoleSerializer

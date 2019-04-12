@@ -50,9 +50,8 @@ class EmployeeForm(forms.ModelForm):
         fields = ('name', 'role', 'status')
         widgets = {
             'name': forms.TextInput(attrs={'placeholder': 'Name', 'class':'form-input'}),
-            'role': forms.TextInput(attrs={'placeholder': 'Role', 'class':'form-input'}),
-            # 'status': forms.TextInput(attrs={'placeholder': 'Company Name', 'class':'form-input'})
         }
+
 
 class RoleLogForm(forms.ModelForm):
 
