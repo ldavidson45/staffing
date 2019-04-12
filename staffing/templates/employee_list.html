@@ -3,8 +3,8 @@
 
 <section class="employees-list">
   <div class="tabs-container">
-    <p>Active Employees</p>
-    <p>Former Employees</p>
+    <button id="active-button">Active Employees</button>
+    <button id="inactive-button">Former Employees</button>
   </div>
 
   <section class="main-employees-container">
@@ -22,6 +22,7 @@
       </tr>
     </table>
 
+    {% endfor %}
     <table class="table" id="inactive">
       <tr class="thead-light">
         <th>Name</th>
@@ -35,6 +36,21 @@
         <td>{{ employee.role }}</td>
       </tr>
     </table>
+
+    {% endfor %}
   </section>
 </section>
 {% endblock %}
+<script>
+  {% block jquery %}
+  $("#inactive-button").click(function() {
+    $("#inactive").show()
+    $('#active').hide()
+  });
+
+  $("#active-button").click(function() {
+    $("#active").show()
+    $('#inactive').hide()
+  });
+  {% endblock %}
+</script>

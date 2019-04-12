@@ -17,4 +17,23 @@
   margin: 1rem;
   padding-top: 2rem;
 }
+
+#inactive {
+  display: none;
+}
+
+button {
+  background: rgba(223, 223, 223, 0.64);
+  border: none;
+  padding: 1rem;
+  font-family: "Catamaran", sans-serif;
+  outline: none;
+}
+
+button:focus {
+  background: #35434c;
+  color: white;
+  outline: none;
+  border: none;
+}
 /*# sourceMappingURL=employee_list.css.map */
