@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:300|Neuton|Work+Sans:300");
+@import url("https://fonts.googleapis.com/css?family=Istok+Web|Rajdhani|Rubik|Source+Code+Pro|Titillium+Web|Ubuntu");
+.employee-name {
+  font-family: "Catamaran", sans-serif;
+  color: #485861;
+}
+
+.new-role {
+  border: 0.2rem dashed #93a5af;
+  padding: 1rem;
+}
+
+.small-title {
+  font-size: 18px;
+}
+
+select {
+  height: 36px;
+}
+
+.form-button {
+  background: rgba(223, 223, 223, 0.64);
+  font-family: "Catamaran", sans-serif;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin-top: 10px;
+  border: none;
+  width: 20%;
+  margin-left: 40%;
+  border-radius: 5px;
+}
+
+.employee-info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: flex-start;
+  background: #485861;
+  flex-direction: column;
+}
+
+.label {
+  color: rgba(223, 223, 223, 0.64);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.detail-text {
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
+  text-transform: capitalize;
+}
+
+.employee-small-box {
+  color: white;
+  margin: 1em;
+  padding: 1rem;
+}
+/*# sourceMappingURL=employee_detail.css.map */
+
+.employee-detail-sidebar {
+  width: 13rem;
+  background: #485861;
+  color: white;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.employee-detail-page {
+  height: 100vh;
+  width: 70vw;
+  padding: 2rem 2rem;
+}
+
+.employee-detail-main {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.sidebar-label {
+  font-family: "Catamaran", sans-serif;
+  display: block;
+  color: rgba(223, 223, 223, 0.64);
+}
+
+.employee-detail-item {
+  text-transform: capitalize;
+}

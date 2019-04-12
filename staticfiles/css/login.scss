@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran:300|Neuton|Work+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Istok+Web|Rajdhani|Rubik|Source+Code+Pro|Titillium+Web|Ubuntu');
+
+$mainfont: 'Catamaran', sans-serif;
+$darkblue: #35434c;
+$darkgreen: #465c4b;
+$yellow: #98946f;
+$khaki: #c9be94;
+$lightyellow: #f5edbe;
+
+.login-bg {
+	background-image: url('/static/images/bluesunupbuild.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.brand {
+	font-family: 'Rajdhani', sans-serif;
+	letter-spacing: 25px;
+	color: #35434c;
+	color: #35434c;
+	font-size: 53px;
+}
+
+h2 {
+	font-family: 'Catamaran', sans-serif;
+	color: #35434c;
+	margin: auto;
+	text-align: center;
+}
+
+form {
+	background-color: rgba(255, 255, 255, 0.749);
+	box-shadow: 0px 2px 23px 0px rgba(128, 128, 128, 0.75);
+	margin: auto;
+	margin-top: 6em;
+	width: 20%;
+	padding: 10px;
+	text-align: center;
+	border-radius: 5px;
+	font-family: 'Catamaran', serif;
+	li {
+		list-style-type: none;
+	}
+	input {
+		outline: none;
+		margin-bottom: 20px;
+	}
+	label {
+		margin-left: 30px;
+		display: flex;
+		font-size: 13px;
+		color: $darkblue;
+		font-family: 'Catamaran', serif;
+	}
+	ul {
+		margin: 0;
+	}
+}
+
+#id_username,
+#id_password {
+	height: 50px;
+	outline: none;
+	box-shadow: 0px 2px 23px 0px rgba(154, 154, 154, 0.75);
+	background-color: rgba(249, 249, 249, 0.701);
+	border: 0px solid;
+	color: rgb(55, 55, 55);
+	border-radius: 10px;
+	width: 15rem;
+	margin-left: 10px;
+	text-align: center;
+}
+
+input {
+	font-family: 'Catamaran', serif;
+	border-radius: 4px;
+	font-size: 15px;
+	background-color: rgba(85, 85, 85, 0.187);
+}
+
+a {
+	font-size: 13px;
+	text-decoration: none;
+	color: rgba(81, 86, 145, 0.818);
+}

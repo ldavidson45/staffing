@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:300|Neuton|Work+Sans:300");
+@import url("https://fonts.googleapis.com/css?family=Istok+Web|Rajdhani|Rubik|Source+Code+Pro|Titillium+Web|Ubuntu");
+// font-family: 'Ubuntu', sans-serif;
+// font-family: 'Titillium Web', sans-serif;
+// font-family: 'Rubik', sans-serif;
+// font-family: 'Source Code Pro', monospace;
+// font-family: 'Rajdhani', sans-serif;
+// font-family: 'Istok Web', sans-serif;
+
+$mainfont: "Catamaran", sans-serif;
+$darkblue: #35434c;
+$darkgreen: #465c4b;
+$yellow: #98946f;
+$khaki: #c9be94;
+$lightyellow: #f5edbe;
+
+.brand-title {
+  font-size: 40px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#sidebar {
+  clip-path: polygon(100% 0, 100% 73%, 50% 100%, 0 100%, 0 0);
+
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 17rem; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+  background: rgb(211, 211, 211);
+  background: linear-gradient(
+    262deg,
+    rgba(211, 211, 211, 1) 59%,
+    rgba(251, 251, 251, 1) 100%
+  );
+  ul {
+    margin-top: 4rem;
+  }
+  li {
+    list-style-type: none;
+    margin-top: 2rem;
+  }
+
+  a:hover {
+    color: rgb(23, 82, 211);
+  }
+  a {
+    text-decoration: none;
+    color: grey;
+    padding: 14px;
+  }
+  h1 {
+    font-family: "Rajdhani", sans-serif;
+    letter-spacing: 25px;
+    margin-bottom: 40px;
+  }
+}
+
+#content {
+  display: block;
+  width: 80vw;
+  margin-left: 17rem;
+  margin-top: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
+
+.username {
+  text-align: center;
+}
+.active {
+  color: green;
+}
+
+.dashboard-chart-container {
+  width: 55vw;
+  height: 50vh;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.section-subheading {
+  text-align: center;
+}
+
+.company-info {
+  margin-left: 3rem;
+  width: 30rem;
+  margin: 2rem auto;
+}
+
+.company-name {
+  margin-bottom: 3rem;
+}
+
+.one-input-form {
+  display: flex;
+  button {
+    background: rgba(223, 223, 223, 0.64);
+    font-family: "Catamaran", sans-serif;
+    font-size: 1.2rem;
+    border: none;
+    width: 20%;
+    margin-left: 1rem;
+    height: 2rem;
+    border-radius: 5px;
+  }
+}
+
+.small-title {
+  margin-bottom: 4rem;
+}
