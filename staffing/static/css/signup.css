@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Catamaran:300|Neuton|Work+Sans:300");
 @import url("https://fonts.googleapis.com/css?family=Istok+Web|Rajdhani|Rubik|Source+Code+Pro|Titillium+Web|Ubuntu");
 .brand {
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   letter-spacing: 25px;
   color: #35434c;
-  font-size: 53px;
+  font-size: 40px;
 }
 
 h2 {
-  font-family: 'Catamaran', sans-serif;
+  font-family: "Catamaran", sans-serif;
   color: #35434c;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -22,17 +22,24 @@ h2 {
 }
 
 form {
-  background-color: rgba(255, 255, 255, 0.749);
+  background-color: rgba(255, 255, 255, 0.89);
   -webkit-box-shadow: 0px 2px 23px 0px rgba(128, 128, 128, 0.75);
           box-shadow: 0px 2px 23px 0px rgba(128, 128, 128, 0.75);
   margin: auto;
-  margin-top: 4em;
-  width: 30%;
-  height: 70%;
+  margin-top: 2em;
+  width: 30vw;
+  height: auto;
   padding: 10px;
   text-align: center;
-  border-radius: 20px;
-  font-family: 'Catamaran', serif;
+  border-radius: 10px;
+  font-family: "Catamaran", serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 form li {
@@ -41,59 +48,77 @@ form li {
 
 form input {
   outline: none;
-  margin-bottom: 20px;
+  width: 25vw;
+  margin: 0 auto;
+  padding: 5px;
 }
 
 form label {
-  margin-left: -168px;
+  width: 80%;
   font-size: 13px;
   color: #35434c;
-  font-family: 'Catamaran', serif;
+  font-family: "Catamaran", serif;
+  text-align: left;
+  margin: 0 auto;
 }
 
 form ul {
   margin: 0;
 }
 
+@media only screen and (max-width: 600px) {
+  form {
+    width: 100vw;
+    margin: 0;
+  }
+}
+
 .form-input {
-  height: 50px;
+  height: 30px;
   outline: none;
   -webkit-box-shadow: 0px 2px 23px 0px rgba(154, 154, 154, 0.75);
           box-shadow: 0px 2px 23px 0px rgba(154, 154, 154, 0.75);
   background-color: rgba(249, 249, 249, 0.701);
   border: 0px solid;
   color: #373737;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 15rem;
-  margin-left: 10px;
   text-align: center;
+  margin: 5px auto;
 }
 
 #id_password1,
 #id_password2 {
-  height: 50px;
+  height: 30px;
   outline: none;
   -webkit-box-shadow: 0px 2px 23px 0px rgba(154, 154, 154, 0.75);
           box-shadow: 0px 2px 23px 0px rgba(154, 154, 154, 0.75);
   background-color: rgba(249, 249, 249, 0.701);
   border: 0px solid;
   color: #373737;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 15rem;
-  margin-left: 10px;
   text-align: center;
+  margin: 5px auto;
 }
 
 button {
-  font-family: 'Catamaran', serif;
+  font-family: "Catamaran", serif;
   border-radius: 4px;
   font-size: 15px;
-  background-color: rgba(85, 85, 85, 0.53);
+  width: 15rem;
+  margin: 15px auto;
+  color: white;
+  background-color: rgba(19, 23, 80, 0.53);
 }
 
 a {
   font-size: 13px;
   text-decoration: none;
   color: rgba(81, 86, 145, 0.818);
+}
+
+.field-div {
+  width: 25rem;
 }
 /*# sourceMappingURL=signup.css.map */

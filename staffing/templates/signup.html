@@ -10,15 +10,13 @@
 <form action="{% url 'signup' %}" method="post" >
   {% csrf_token %}
 <h2>Sign up</h2>
-  <div class="singup-form">
     {% for field in form.visible_fields %}
-    <div>{{field.label_tag}}<div>
-    <div>{{ field }}</div>
+    {{field.label_tag}}
+    {{ field }}
     {% endfor %}
   </ul>
  
   <button type="submit">Submit</button>
-  <br>
   <a href="/login/">Or Login as Exisiting User<a>
 </form>
 
