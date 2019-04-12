@@ -26,7 +26,9 @@ SECRET_KEY = '3z^oh!%3*7z4&65_l7a(&gjj)-@7#vi$k4z0f*j-u9x(1j#(hz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'tracker-solutions.herokuapp.com'
+]
 
 # Application definition
 
