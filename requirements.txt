@@ -1,7 +1,6 @@
 dj-database-url==0.5.0
 Django==2.2
 django-crispy-forms==1.7.2
-django_heroku==0.3.1
 django-tempus-dominus==5.1.2.4
 djangorestframework==3.9.2
 gunicorn==19.9.0
