@@ -54,6 +54,8 @@ REST_FRAMEWORK = {
 
 AUTH_USER_MODEL = 'staffing.CustomUser'
 
+TEST_RUNNER = 'django_heroku.HerokuDiscoverRunner'
+
 LOGIN_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
@@ -156,4 +158,5 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-# django-heroku.settings(locals())
+import django_heroku
+django_heroku.settings(locals())
