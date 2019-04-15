@@ -39,5 +39,4 @@ Role_Log:
 
 # Wireframe
 
-Inline-style:
 ![wireframe home page](https://github.com/ldavidson45/staffing/blob/master/planning/staffing_plan.png "Home Page Layout")
