@@ -48,7 +48,9 @@ class EmployeeForm(forms.ModelForm):
         widgets = {
             'name': forms.TextInput(attrs={'placeholder': 'Name', 'class':'form-input'}),
         }
-
+    def __init__(self, company, *args, **kwargs):
+        super(EmployeeForm, self).__init__(*args, **kwargs)
+        self.fields['role'].queryset = Role_Type.objects.filter(company=company)
 
 class RoleLogForm(forms.ModelForm):
 

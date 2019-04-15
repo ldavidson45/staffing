@@ -77,14 +77,14 @@ def create_employee(request):
     pk = request.user.profile.company.pk
     company = Company.objects.get(pk=pk)
     if request.method == 'POST':
-        form = EmployeeForm(request.POST)
+        form = EmployeeForm(company, request.POST)
         if form.is_valid():
             employee = form.save(commit = False)
             employee.company = company
             employee.save()
             return redirect('employee_list')
     else:
-        form = EmployeeForm()
+        form = EmployeeForm(company)
     return render(request, 'create_employee.html', {'form': form})
 
 @login_required
