@@ -39,4 +39,4 @@ Role_Log:
 
 # Wireframe
 
-![Home Page](./Wireframe.jpg)
+![Home Page](planning/Wireframe.JPG)
