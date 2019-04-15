@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR|Roboto");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans|Roboto|Ubuntu+Mono");
 .nav {
   background: #475153;
   position: fixed;
@@ -16,7 +16,7 @@
 .nav__title {
   text-align: center;
   font-size: 2.5rem;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Ubuntu Mono", monospace;
 }
 
 .nav__title-link {
