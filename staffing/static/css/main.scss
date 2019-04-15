@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR|Roboto");
+$base-background: #475153;
+$main-font-color: #f2efea;
+$blue-accent: #66d7d1;
+$red-accent: #ee6352;
+$heading-font: "Noto Sans KR", sans-serif;
+$body-font: "Roboto", sans-serif;
+
+.nav {
+  background: $base-background;
+  position: fixed;
+  height: 100%;
+  display: flex;
+  width: 15rem;
+  flex-direction: column;
+}
+
+.nav__title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: $heading-font;
+}
+
+.nav__title-link {
+  text-decoration: none;
+  color: $main-font-color;
+}
+
+.nav__subtitle {
+  padding: 0 2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: $body-font;
+  color: $blue-accent;
+  i {
+    color: $blue-accent;
+    padding-right: 1rem;
+  }
+}
+
+.nav__link-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav__item {
+  padding: 1.5rem;
+  font-family: $body-font;
+  font-size: 1rem;
+  text-align: right;
+  text-transform: uppercase;
+  a {
+    text-decoration: none;
+    color: $main-font-color;
+  }
+}
+
+.nav__item:hover {
+  background: #394142;
+  a {
+    text-decoration: none;
+    color: $blue-accent;
+  }
+}
+
+.content {
+  margin-left: 15rem;
+}

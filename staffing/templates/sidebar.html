@@ -1,55 +1,35 @@
-<html>
-{% load static %}
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>title</title>
-
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <!-- Our Custom CSS -->
-   
-   
-    <!-- Font Awesome JS -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-    
-</head>
-
-<body>
-
-
-<div class="wrapper">
-
-    <!-- Sidebar -->
-    <nav id="sidebar">
-       <br>
-       <div class="sidebar-header">
-           <h1 class="brand-title"><a href="/">TrACKR</a><h1>
-        </div>
-        <p class="username"><i class="fas fa-user-circle"></i> {{user.first_name}} {{user.last_name}}</p>
-
-        {% if user.is_authenticated %}
-        <ul class="list-styled components">
-            <li class='nav-item'><a href="/">Dashboard</a></li>
-            <li class='nav-item'><a href="/employees/">Employees</a></li>
-            <li class='nav-item'><a href="/employee/new">New Employee</a></li>
-            <li class='nav-item'><a href="/company/">Company Roles</a></li>
-            <li class='nav-item'><a href="/logout">Logout</a></li>
-
-        </ul>
-        {% else %}
-          <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>  
-          <li><a href="{% url 'signup'%}?next={{request.path}}">Sign Up</a></li>   
- 
-        {% endif %} 
-    </nav>
-
-
-
-</body>
-</html>
-
-
+<nav class="nav">
+  <h1 class="nav__title">
+    <a class="nav__title-link" href="/">Staffing Tracker</a>
+  </h1>
+  <hr />
+  <p class="nav__subtitle">
+    <i class="fas fa-user-circle"></i>{{ user.first_name }} {{ user.last_name }}
+  </p>
+  <ul class="nav__link-list">
+    {% if user.is_authenticated %}
+    <li class="nav__item"><a class="nav__link" href="/">Dashboard</a></li>
+    <li class="nav__item">
+      <a class="nav__link" href="/employees/">Employees</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="/employee/new">New Employee</a>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="/company/">Company Roles</a>
+    </li>
+    <li class="nav__item"><a class="nav__link" href="/logout">Logout</a></li>
+    {% else %}
+    <li class="nav__item">
+      <a class="nav__link" href="{% url 'login'%}?next={{ request.path }}"
+        >Login</a
+      >
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" href="{% url 'signup'%}?next={{ request.path }}"
+        >Sign Up</a
+      >
+    </li>
+    {% endif %}
+  </ul>
+</nav>

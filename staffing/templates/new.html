@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<html blass="base-bg">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>TrACKR</title>
+
     <!-- Bootstrap CSS CDN -->
     <link
       rel="stylesheet"
@@ -32,8 +33,6 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <link href="/static/css/main.css" rel="stylesheet" />
-
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -52,11 +51,13 @@
   </head>
   <body>
     {% include 'sidebar.html' %}
+    <!-- Page Content -->
 
-    <main class="content">
+    <div id="content">
       {% block content %} {% endblock %}
-    </main>
+    </div>
 
+    <link href="/static/css/main.css" rel="stylesheet" />
     <script
       src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
       integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
