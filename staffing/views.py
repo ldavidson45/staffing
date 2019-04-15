@@ -115,13 +115,14 @@ def role_log_delete(request, pk):
 @login_required
 def employee_edit(request, pk):
     employee = Employee.objects.get(pk=pk)
+    company = request.user.profile.company
     if request.method == "POST":
-        form = EmployeeForm(request.POST, instance=employee)
+        form = EmployeeForm(company, request.POST, instance=employee)
         if form.is_valid():
             employee = form.save()
             return redirect('employee_detail', pk=employee.pk)
     else:
-        form = EmployeeForm(instance=employee)
+        form = EmployeeForm(company, instance=employee)
     return render(request, 'create_employee.html', {"form": form})
 
 class Home_View(LoginRequiredMixin, View):
