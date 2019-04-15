@@ -1,15 +1,44 @@
 # Tracker Solutions
 
-This is a web application to help employers keep track of their staffing practices over time.
+This is a web application to help employers keep track of their staffing practices over time. Inspired by real-world problems faced in the workplace, Tracker Solutions aims to help employers predict their staffing needs on a monthly basis. 
 
- additional notes about how to deploy this on a live system
+# Built With
+
+- Python
+- Django
+- Django Templates
+- Charts.js
+- PostgreSQL
+
+# List of Features
+
+A user can:
+
+- Create a new account
+- Log in
+- Log out
+- Create their company profile
+- Add employees
+- Add new roles within their company
+- View employee details and update their roles held within the company
+- View a chart displaying the monthly staffing data for each role on their team
+
+
+# Dependencies
+
+- django
+- psycopg2-binary
+- django-tempus-dominus
+- djangorestframework
+- gunicorn
+- whitenoise
+- python_version = "3.7"
 
 # Authors
 
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
+- **Liz Davidson**  
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
+- **Virginia Lash** -Frontend styling-
 
 ## Acknowledgments
 
