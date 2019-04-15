@@ -19,6 +19,5 @@ urlpatterns = [
     path('role-log/<int:pk>/delete', views.role_log_delete, name='role_log_delete'),
     path('employee/<int:pk>/edit', views.employee_edit, name='employee_edit'),
     url(r'^$', views.Home_View.as_view(), name='home'),
-    url('^api/data/<int:pk>', views.get_data, name='api-data'),
     url('api/chart/data/', views.ChartData.as_view()),
 ]

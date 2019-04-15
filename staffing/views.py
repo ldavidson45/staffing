@@ -17,7 +17,8 @@ from .models import Company, Profile, Role_Type, Employee, Role_Log
 from .script import get_employee_roles
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 # Create your views here.
 
@@ -130,20 +131,14 @@ class Home_View(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         return render(request, 'chart.html', {})
 
-@login_required
-def get_data(request, *args, **kwargs):
-    data = {
-        'sales': 200,
-        'customers': 10
-    }
-    return JsonResponse(data)
 
 
 class ChartData(APIView):
-
-    authentication_classes = []
-    permission_classes = []
+    authentication_classes = (SessionAuthentication, BasicAuthentication)
+    permission_classes = (IsAuthenticated,)
     def get(self, request, format=None):
+        user = self.request.user
+        print(request.user)
         datasets = get_roles_count()
         labels = get_months_str()
         default = []
