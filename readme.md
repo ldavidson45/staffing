@@ -36,9 +36,9 @@ A user can:
 
 # Authors
 
-- **Liz Davidson**  
+- **Liz Davidson** - Concept, backend logic, frontend functionality
 
-- **Virginia Lash** -Frontend styling-
+- **Virginia Lash** -Frontend styling
 
 ## Acknowledgments
 
