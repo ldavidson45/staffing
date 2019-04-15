@@ -1,14 +1,16 @@
 {% extends 'base.html' %} {% block content %}
-<link href="/static/css/create_employee.css" rel="stylesheet"/>
+<link href="/static/css/create_employee.css" rel="stylesheet" />
 
 <h1>Hello {{ user.first_name }},</h1>
-<h4>Please enter the following information to continue:<h4>
-
-
-<form method="POST">
-<h3>Create New Employee</h3>
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit" class="save btn btn-default">Save</button>
-</form>
-{% endblock %}
+<h4>
+  Please enter the following information to continue:
+  <h4>
+    <form method="POST">
+      <h3>Add/Edit Employee</h3>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+    {% endblock %}
+  </h4>
+</h4>
