@@ -91,18 +91,17 @@ def create_employee(request):
 def employee_detail(request, pk):
     employee = Employee.objects.select_related().get(pk=pk)
     roles = get_employee_roles(employee)
+    company = request.user.profile.company
     if request.method == 'POST':
-        form = RoleLogForm(request.POST)
+        form = RoleLogForm(company, request.POST)
         if form.is_valid():
             role_log = form.save(commit = False)
             role_log.employee = employee
             role_log.company = employee.company
             role_log.save()
             return redirect( 'employee_detail', pk=employee.pk)
-
-
     else: 
-        form = RoleLogForm()
+        form = RoleLogForm(company)
 
     return render(request, 'employee_detail.html', {'form': form, 'roles': roles, 'employee': employee})
 

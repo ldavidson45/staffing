@@ -63,4 +63,7 @@ class RoleLogForm(forms.ModelForm):
                 'data-target': '#datetimepicker4'}),
             'end_date': DatePicker(attrs={'append': 'fa fa-calendar'})
             }
+    def __init__(self, company, *args, **kwargs):
+        super(RoleLogForm, self).__init__(*args, **kwargs)
+        self.fields['role_type'].queryset = Role_Type.objects.filter(company=company)
 
