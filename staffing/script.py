@@ -39,10 +39,10 @@ def get_months():
 
     return list(reversed(month_year_list))
 
-def get_roles_count():
-    # user_profile = Profile.objects.filter(user=user)
-    # company = user_profile.company
-    roles = Role_Type.objects.all()
+def get_roles_count(user):
+    user_profile = Profile.objects.get(user=user)
+    company = user_profile.company
+    roles = Role_Type.objects.filter(company=company)
     dates = get_months()
     month_datasets = []
     today = datetime.datetime.today()

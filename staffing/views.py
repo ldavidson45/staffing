@@ -138,8 +138,7 @@ class ChartData(APIView):
     permission_classes = (IsAuthenticated,)
     def get(self, request, format=None):
         user = self.request.user
-        print(request.user)
-        datasets = get_roles_count()
+        datasets = get_roles_count(user)
         labels = get_months_str()
         default = []
         data = {
