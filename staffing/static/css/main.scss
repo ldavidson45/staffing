@@ -6,6 +6,7 @@ $red-accent: #ee6352;
 $heading-font: "Ubuntu Mono", monospace;
 $body-font: "Roboto", sans-serif;
 
+// Sidebar Nav
 .nav {
   background: $base-background;
   position: fixed;
@@ -63,6 +64,27 @@ $body-font: "Roboto", sans-serif;
   }
 }
 
+// Main content container
+
 .content {
   margin-left: 15rem;
+  padding: 1.5rem;
+}
+
+// Dashboard
+
+.dashboard__heading {
+  font-family: $heading-font;
+  color: $red-accent;
+}
+
+.dashboard__chart-title {
+  font-family: $body-font;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard__chart-container {
+  height: 2rem;
 }

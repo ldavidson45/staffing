@@ -66,5 +66,22 @@
 
 .content {
   margin-left: 15rem;
+  padding: 1.5rem;
+}
+
+.dashboard__heading {
+  font-family: "Ubuntu Mono", monospace;
+  color: #ee6352;
+}
+
+.dashboard__chart-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard__chart-container {
+  height: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
