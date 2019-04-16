@@ -1,18 +1,12 @@
 from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm, CompanyForm, RoleTypeForm, EmployeeForm, RoleLogForm
 from django.contrib.auth import login, authenticate
-from django.urls import reverse_lazy
-from django.views import generic
-from django.contrib import messages
 from .models import Company, Profile, Role_Type, Employee, Role_Log, CustomUser, Profile
 from .script import get_employee_roles, get_roles_count, get_months_str
-from django.shortcuts import render_to_response
 from django.views.generic import View
 from django.http import JsonResponse
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .serializers import RoleSerializer
-from rest_framework import viewsets
 from .models import Company, Profile, Role_Type, Employee, Role_Log
 from .script import get_employee_roles
 from django.contrib.auth.decorators import login_required
