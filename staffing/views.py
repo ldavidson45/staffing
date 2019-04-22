@@ -104,8 +104,9 @@ def employee_detail(request, pk):
 
 @login_required
 def role_log_delete(request, pk):
-    employee = role.employee
+    role = Role_Log.objects.get(id=pk)
     Role_Log.objects.get(id=pk).delete()
+    employee = role.employee
     return redirect('employee_detail', pk=employee.pk)
 
 @login_required
