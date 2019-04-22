@@ -13,7 +13,8 @@
       {% for field in form.visible_fields %}
       <div>
         <p class="form__label">{{ field.label_tag }}</p>
-        {{ field }}
+        <div class="form__input">{{ field }}</div>
+        
       </div>
       {% endfor %}
       <button type="submit">Submit</button>

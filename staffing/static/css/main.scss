@@ -108,6 +108,20 @@ $body-font: "Roboto", sans-serif;
 .form__label {
   text-transform: uppercase;
   font-family: $body-font;
+  font-size: 0.7rem;
+  margin-bottom: 0.3rem;
+}
+
+.form__input {
+  input {
+    display: block;
+    width: 100%;
+    border: none;
+    height: 1.5rem;
+    border: $base-background solid 0.02rem;
+    padding: 0 0.3rem;
+    font-size: 0.9rem;
+  }
 }
 
 .signup {
