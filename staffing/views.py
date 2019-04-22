@@ -76,7 +76,7 @@ def create_employee(request):
             employee = form.save(commit = False)
             employee.company = company
             employee.save()
-            return redirect('employee_list')
+            return redirect('employee_detail', pk=employee.pk)
     else:
         form = EmployeeForm(company)
     return render(request, 'create_employee.html', {'form': form})
