@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Login</title>
-    <link href="/static/css/main.css" rel="stylesheet" />
-  </head>
-  <body class="form__container">
-    <form class="form" method="post">
-        {% csrf_token %}
-      <h1 class="form__title">Staffing Tracker Login</h1>
-      {% for field in form.visible_fields %}
-        <p class="form__label">{{ field.label_tag }}</p>
-        <div class="form__input">{{ field }}</div>
-        {% endfor %}
-        <div class="form__button-container">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Login</title>
+  <link href="/static/css/main.css" rel="stylesheet" />
+</head>
+
+<body class="form__container">
+  <form class="form" method="post">
+    {% csrf_token %}
+    <h1 class="form__title">Staffing Tracker Login</h1>
+    {% for field in form.visible_fields %}
+    <p class="form__label">{{ field.label_tag }}</p>
+    <div class="form__input">{{ field }}</div>
+    {% endfor %}
+    <div class="form__button-container">
       <button class="form__button" type="submit">Submit</button>
     </div>
 
-      <a class="form__link" href="/login/">Or Create A New Account<a>
-    </form>
-  </body>
+    <a class="form__link" href="/signup/">Or Create A New Account<a>
+  </form>
+</body>
+
 </html>
