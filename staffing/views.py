@@ -13,7 +13,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
-from django.db.models import Count
+from django.db.models import Count, Min, Max
 
 # Create your views here.
 
@@ -63,8 +63,8 @@ def company_detail(request):
 def employee_list(request):
     pk = request.user.profile.company.pk
     company = Company.objects.get(pk=pk)
-    active_employees = Employee.objects.all().filter(company=company,status='active')
-    inactive_employees = Employee.objects.all().filter(company=company,status='inactive')
+    active_employees = Employee.objects.all().filter(company=company,status='active').annotate(start_date=Min('role_logs__start_date'))
+    inactive_employees = Employee.objects.all().filter(company=company,status='inactive').annotate(start_date=Min('role_logs__start_date'), end_date=Max('role_logs__end_date'))
 
 
     return render(request, 'employee_list.html', {'active': active_employees, 'inactive': inactive_employees})
@@ -72,7 +72,7 @@ def employee_list(request):
 @login_required
 def create_employee(request):
     pk = request.user.profile.company.pk
-    company = Company.objects.get(pk=pk)
+    company = request.user.profile.company
     if request.method == 'POST':
         form = EmployeeForm(company, request.POST)
         if form.is_valid():

@@ -2,7 +2,7 @@
 
 <h1>Hello {{ user.first_name }},</h1>
 Please enter the following information to continue:
-<form class="form__dark" action="{% url 'create_employee' %}" method="post">
+<form class="form__dark" method="post">
   <h5>Add or edit employee:</h5>
   {% csrf_token %} {% for field in form.visible_fields %}
   <div>

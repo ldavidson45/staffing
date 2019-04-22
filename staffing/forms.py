@@ -53,7 +53,6 @@ class EmployeeForm(forms.ModelForm):
         self.fields['role'].queryset = Role_Type.objects.filter(company=company)
 
 class RoleLogForm(forms.ModelForm):
-
     class Meta:
         model = Role_Log
         fields = ('role_type', 'start_date', 'end_date')

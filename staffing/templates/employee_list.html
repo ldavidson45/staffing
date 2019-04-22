@@ -12,6 +12,8 @@
       <tr class="thead-light">
         <th>Name</th>
         <th>Current Role</th>
+        <th>Start Date</th>
+
       </tr>
       {% for employee in active %}
       <tr>
@@ -19,6 +21,8 @@
           <a href="/employee/{{ employee.pk }}">{{ employee.name }}</a>
         </td>
         <td>{{ employee.role }}</td>
+        <td>{{ employee.start_date }}</td>
+
       </tr>
       {% endfor %}
     </table>
@@ -42,12 +46,12 @@
 {% endblock %}
 <script>
   {% block jquery %}
-  $("#inactive-button").click(function() {
+  $("#inactive-button").click(function () {
     $("#inactive").show()
     $('#active').hide()
   });
 
-  $("#active-button").click(function() {
+  $("#active-button").click(function () {
     $("#active").show()
     $('#inactive').hide()
   });
