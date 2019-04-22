@@ -221,6 +221,8 @@ canvas {
 .employee__heading {
   background: #dbdbdb;
   padding: 1rem;
+  width: 50rem;
+  margin: 1rem auto;
 }
 
 .employee__heading h2 {
