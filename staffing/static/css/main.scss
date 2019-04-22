@@ -27,9 +27,14 @@ $body-font: "Roboto", sans-serif;
   color: $main-font-color;
 }
 
+.nav__title-link:hover {
+  text-decoration: none;
+  color: $main-font-color;
+}
+
 .nav__subtitle {
   padding: 0 2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: center;
   font-family: $body-font;
   color: $blue-accent;

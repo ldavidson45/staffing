@@ -24,9 +24,14 @@
   color: #f2efea;
 }
 
+.nav__title-link:hover {
+  text-decoration: none;
+  color: #f2efea;
+}
+
 .nav__subtitle {
   padding: 0 2rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: center;
   font-family: "Roboto", sans-serif;
   color: #66d7d1;
