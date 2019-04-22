@@ -13,6 +13,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
+from django.db.models import Count
 
 # Create your views here.
 
@@ -57,6 +58,7 @@ def company_detail(request):
         form = RoleTypeForm()
     return render(request, 'company_detail.html', {'company': company, 'form': form, })
 
+
 @login_required
 def employee_list(request):
     pk = request.user.profile.company.pk
@@ -94,7 +96,7 @@ def employee_detail(request, pk):
             role_log.employee = employee
             role_log.company = employee.company
             role_log.save()
-            return redirect( 'employee_detail', pk=employee.pk)
+            return redirect('employee_detail', pk=employee.pk)
     else: 
         form = RoleLogForm(company)
 
@@ -102,10 +104,16 @@ def employee_detail(request, pk):
 
 @login_required
 def role_log_delete(request, pk):
-    role = Role_Log.objects.get(id=pk)
     employee = role.employee
     Role_Log.objects.get(id=pk).delete()
     return redirect('employee_detail', pk=employee.pk)
+
+@login_required
+def delete_company_role(request, pk):
+    company = request.user.profile.company
+    Role_Type.objects.get(pk=pk).delete()
+    return redirect('company_detail')
+
 
 @login_required
 def employee_edit(request, pk):
@@ -124,9 +132,9 @@ class Home_View(LoginRequiredMixin, View):
     login_url = '/login/'
     redirect_field_name = 'redirect_to'
     def get(self, request, *args, **kwargs):
-        return render(request, 'chart.html', {})
-
-
+        company = self.request.user.profile.company
+        roles = Role_Type.objects.filter(company=company).annotate(count = Count('employees')).order_by('-count')
+        return render(request, 'chart.html', {'roles': roles})
 
 class ChartData(APIView):
     authentication_classes = (SessionAuthentication, BasicAuthentication)

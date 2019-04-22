@@ -91,8 +91,33 @@
   margin-bottom: 1rem;
 }
 
-.dashboard__chart-container {
-  height: 2rem;
+canvas {
+  margin-bottom: 2rem;
+}
+
+.dashboard__role-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.dashboard__role-card {
+  min-width: 10rem;
+  height: 10rem;
+  background: #66d7d1;
+  margin: 1rem;
+}
+
+.dashboard__role-card h5 {
+  text-align: center;
+  margin: 1rem 1rem;
+}
+
+.dashboard__role-card h3 {
+  margin-top: 2rem;
+  text-align: center;
 }
 
 .form {

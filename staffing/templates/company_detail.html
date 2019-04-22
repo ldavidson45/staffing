@@ -14,7 +14,7 @@
       <tr>
         <td>{{ role.title }}</td>
         <td>
-          <a href="#"><i class="far fa-trash-alt"></i></a>
+          <a href="{% url 'delete_company_role' pk=role.pk %}"><i class="far fa-trash-alt"></i></a>
         </td>
       </tr>
       {% endfor %}

@@ -3,38 +3,37 @@
   {% block jquery %}
   var endpoint = "/api/chart/data/";
   var defaultdata = []
-  var labels=[]
+  var labels = []
   $.ajax({
     method: "GET",
     url: endpoint,
-    success: function(data) {
-      console.log(data.labels);
+    success: function (data) {
       labels = data.labels;
       defaultdata = data.default;
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
-          type: "bar",
-          data: data,
-          options: {
-            maintainAspectRatio: true,
-            responsive: true,
-            scales: {
-              xAxes: [{
-                  stacked: true
-              }],
-              yAxes: [{
-                  stacked: true
-              }]
-            },
-            legend: {
-              display: true,
-              position: 'right'
-            },
-            fontSize: '2.5rem',
-    }
-          })
-      },
-    error: function(error_data) {
+        type: "bar",
+        data: data,
+        options: {
+          maintainAspectRatio: true,
+          responsive: true,
+          scales: {
+            xAxes: [{
+              stacked: true
+            }],
+            yAxes: [{
+              stacked: true
+            }]
+          },
+          legend: {
+            display: true,
+            position: 'right'
+          },
+          fontSize: '2.5rem',
+        }
+      })
+    },
+    error: function (error_data) {
       console.log("error");
       console.log(error_data);
     }
@@ -43,11 +42,10 @@
 </script>
 
 {% block content %}
-
 <h1 class="dashboard__heading">{{ user.profile.company }}</h1>
 <h5 class="dashboard__chart-title">Monthly Staff Makeup</h5>
-<div class="dashboard__chart-container">
-  <canvas id="myChart" aria-label="Staff Makeup Per Month" role="img"></canvas>
-</div>
+<canvas id="myChart" aria-label="Staff Makeup Per Month" role="img"></canvas>
+
+{% include 'dashboard_roles.html' %}
 
 {% endblock content %}

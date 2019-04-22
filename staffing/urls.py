@@ -20,4 +20,5 @@ urlpatterns = [
     path('employee/<int:pk>/edit', views.employee_edit, name='employee_edit'),
     url(r'^$', views.Home_View.as_view(), name='home'),
     url('api/chart/data/', views.ChartData.as_view()),
+    path('role/<int:pk>', views.delete_company_role, name="delete_company_role")
 ]

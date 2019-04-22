@@ -93,8 +93,28 @@ $body-font: "Roboto", sans-serif;
   margin-bottom: 1rem;
 }
 
-.dashboard__chart-container {
-  height: 2rem;
+canvas {
+  margin-bottom: 2rem;
+}
+
+.dashboard__role-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dashboard__role-card {
+  min-width: 10rem;
+  height: 10rem;
+  background: #66d7d1;
+  margin: 1rem;
+  h5 {
+    text-align: center;
+    margin: 1rem 1rem;
+  }
+  h3 {
+    margin-top: 2rem;
+    text-align: center;
+  }
 }
 
 // signup form
