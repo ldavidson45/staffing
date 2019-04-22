@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <h1>Welcome {{ user.first_name }}!</h1>
-<form class="form__dark" action="{% url 'create_employee' %}" method="post">
+<form class="form__dark" method="post">
   <h5>Add your organization:</h5>
   {% csrf_token %} {% for field in form.visible_fields %}
   <div>

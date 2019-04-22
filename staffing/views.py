@@ -31,6 +31,7 @@ def sign_up(request):
 @login_required
 def create_company(request, pk):
     user = request.user
+    pk = user.profile.pk
     if request.method == 'POST':
         form = CompanyForm(request.POST)
         if form.is_valid():
