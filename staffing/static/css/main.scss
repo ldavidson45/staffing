@@ -96,7 +96,8 @@ $body-font: "Roboto", sans-serif;
   width: 20rem;
   margin: 2rem auto auto auto;
   padding: 2rem;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 .signup__title {
   font-size: 2rem;
@@ -119,8 +120,8 @@ $body-font: "Roboto", sans-serif;
     border: none;
     height: 1.5rem;
     border: $base-background solid 0.02rem;
-    padding: 0 0.3rem;
     font-size: 0.9rem;
+    padding: 0.3rem;
   }
 }
 
@@ -129,4 +130,20 @@ $body-font: "Roboto", sans-serif;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+}
+
+.form__button {
+  margin: 1rem auto;
+  background-color: $base-background;
+  font-size: 1.2rem;
+  font-family: $body-font;
+  color: white;
+  padding: 0.5rem;
+  width: 50%;
+}
+
+.form__link {
+  text-align: center;
+  color: $red-accent;
+  text-decoration: none;
 }

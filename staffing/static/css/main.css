@@ -90,7 +90,13 @@
   width: 20rem;
   margin: 2rem auto auto auto;
   padding: 2rem;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .signup__title {
@@ -113,8 +119,8 @@
   border: none;
   height: 1.5rem;
   border: #475153 solid 0.02rem;
-  padding: 0 0.3rem;
   font-size: 0.9rem;
+  padding: 0.3rem;
 }
 
 .signup {
@@ -122,5 +128,21 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+}
+
+.form__button {
+  margin: 1rem auto;
+  background-color: #475153;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  padding: 0.5rem;
+  width: 50%;
+}
+
+.form__link {
+  text-align: center;
+  color: #ee6352;
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */
