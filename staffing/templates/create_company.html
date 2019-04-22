@@ -1,23 +1,13 @@
 {% extends 'base.html' %} {% block content %}
 
-<link href="/static/css/create_company.css" rel="stylesheet" />
-
 <h1>Welcome {{ user.first_name }}!</h1>
-<h4>
-  Please enter the following information to continue,
-</h4>
-    <br />
-
-    <form method="post">
-      <h3>Add Your Company</h3>
-      {% csrf_token %}
-      <ul>
-        {% for field in form.visible_fields %}
-        <li>{{ field }}</li>
-        {% endfor %}
-      </ul>
-      <button type="submit">Next</button>
-    </form>
-    {% endblock %}
-  </h4>
-</h4>
+<form class="form__dark" action="{% url 'create_employee' %}" method="post">
+  <h5>Add your organization:</h5>
+  {% csrf_token %} {% for field in form.visible_fields %}
+  <div>
+    <div class="form__input">{{ field }}</div>
+  </div>
+  {% endfor %}
+  <button class="form__button" type="submit">Submit</button>
+</form>
+{% endblock %}
