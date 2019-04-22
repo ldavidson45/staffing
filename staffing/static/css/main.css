@@ -85,7 +85,7 @@
   height: 2rem;
 }
 
-.signup__form {
+.form {
   background: rgba(255, 255, 255, 0.88);
   width: 20rem;
   margin: 2rem auto auto auto;
@@ -99,7 +99,7 @@
           flex-direction: column;
 }
 
-.signup__title {
+.form__title {
   font-size: 2rem;
   font-family: "Ubuntu Mono", monospace;
   text-align: center;
@@ -123,7 +123,7 @@
   padding: 0.3rem;
 }
 
-.signup {
+.form__container {
   background-image: url("../images/Subtle-Prism.svg");
   background-repeat: no-repeat;
   background-size: cover;
