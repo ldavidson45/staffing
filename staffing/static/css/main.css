@@ -211,12 +211,38 @@
   color: #1f3a93;
 }
 
-.employee__title {
+.table__heading {
   margin: 1rem 0;
   color: #ee6352;
 }
 
 .form__select select {
   height: calc(2.25rem + 2px);
+}
+
+.form-horizontal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-horizontal .table__heading {
+  margin: 0 1rem 0 0;
+}
+
+.form-horizontal form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form-horizontal .form__button {
+  margin-left: 0.5rem;
 }
 /*# sourceMappingURL=main.css.map */

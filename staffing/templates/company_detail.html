@@ -7,7 +7,7 @@
   <section class="roles-table">
     <table class="table">
       <tr>
-        <th>List of Roles</th>
+        <th class="table__heading">COMPANY ROLES</th>
         <th></th>
       </tr>
       {% for role in company.roles.all %}
@@ -21,12 +21,12 @@
     </table>
   </section>
 
-  <div>
-    <h5>Add {{ company.name }}'s current roles and positions:</h5>
-    <form class="one-input-form" method="POST">
+  <div class="form-horizontal">
+    <h5 class="table__heading">ADD NEW ROLE:</h5>
+    <form method="POST">
       {% csrf_token %}
-      {{ form.as_p }}
-      <button type="submit">Add</button>
+      {{ form.title }}
+      <button class="form__button" type="submit">Add</button>
     </form>
   </div>
 </section>

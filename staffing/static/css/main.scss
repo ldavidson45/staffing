@@ -202,7 +202,7 @@ $body-font: "Roboto", sans-serif;
   color: #1f3a93;
 }
 
-.employee__title {
+.table__heading {
   margin: 1rem 0;
   color: $red-accent;
 }
@@ -210,5 +210,23 @@ $body-font: "Roboto", sans-serif;
 .form__select {
   select {
     height: calc(2.25rem + 2px);
+  }
+}
+
+.form-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .table__heading {
+    margin: 0 1rem 0 0;
+  }
+
+  form {
+    display: flex;
+  }
+
+  .form__button {
+    margin-left: 0.5rem;
   }
 }
