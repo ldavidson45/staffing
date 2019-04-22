@@ -1,93 +1,60 @@
 {% extends 'base.html' %} {% block content %}
-<link
-  rel="stylesheet"
-  href="../../static/css/employee_detail.css"
-  type="text/css"
-/>
 
-<section class="employee-detail-page">
-<section class="employee-detail-header">
-  <h2 class="employee-name">{{ employee.name }}</h2>
-</section>
+<div class="employee__heading">
+  <h2>{{employee.name}} <span class="employee__link"><a href='/employee/{{employee.pk}}/edit'>[edit]</a></span>
+  </h2>
+  <p>{{employee.role}}</p>
+  <p>Status: {{employee.status}}</p>
+</div>
 
-<section class='employee-detail-main'>
-  <section class="employee-detail-sidebar">
-    <div class="employee-detail-item">
-      <p><span class="sidebar-label">STATUS</span> {{ employee.status }}</p>
-    </div>
+<section class="employee__container">
+  <h4 class="employee__title">ROLES</h4>
+  <table class="table table-bordered">
+    <tr>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Role</th>
+      <th>Delete</th>
+    </tr>
+    {% for role in roles %}
+    <tr>
+      <td>{{ role.start_date }}</td>
+      <td>{{ role.end_date }}</td>
+      <td>{{ role.role_type }}</td>
 
-    <div>
-      <p><span class="sidebar-label">CURRENT ROLE</span> {{ employee.role }}</p>
-    </div>
-
-    <a href='/employee/{{employee.pk}}/edit'>Edit employee info</a>
-  </section>
-
-  <section class="employee-roles-container">
-    <table class="table">
+      <td>
+        <a href="{% url 'role_log_delete' pk=role.pk %}"><i class="far fa-trash-alt"></i></a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <br>
+  <h4 class="employee__title">NEW ROLE</h4>
+  <table class="table table-bordered">
+    <form method="post">
+      {% csrf_token %}
       <tr>
-        <th>Roles Held</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-
-
-      </tr>
-      {% for role in roles %}
-      <tr>
-        <td>{{ role.role_type }}</td>
-        <td>{{ role.start_date }}</td>
-        <td>to</td>
-        <td>{{ role.end_date }}</td>
-        <td>
-          <a href="{% url 'role_log_delete' pk=role.pk %}"
-            ><i class="far fa-trash-alt"></i
-          ></a>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <td>{{ form.start_date }}</td>
+        <td>{{ form.end_date }}</td>
+        <td class="form__select">{{ form.role_type }}</td>
+        <td><button type="submit" class="form__button">Save</button>
         </td>
       </tr>
-      {% endfor %}
-    </table>
-
-    <section class="new-role">
-      <p class="small-title">Add A New Role:</p>
-      <form method="post">
-        {% csrf_token %}
-
-        <table class="table">
-          <tr>
-            <th>Start Date</th>
-            <th>End Date</th>
-            <th>Position</th>
-          </tr>
-          <tr>
-            <td>{{ form.start_date }}</td>
-            <td>{{ form.end_date }}</td>
-            <td>{{ form.role_type }}</td>
-          </tr>
-        </table>
-
-        <button type="submit" class="form-button">Save</button>
-      </form>
-    </section>
-  </section>
+  </table>
+  </form>
+  </table>
 </section>
-</section>
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    {{ form.media }}
-    <script>
-      $(function() {
-        $("#datetimepicker1").datetimepicker({
-          format: "MM/DD/YYYY"
-        });
-      });
-    </script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+{{ form.media }}
+<script>
+  $(function () {
+    $("#datetimepicker1").datetimepicker({
+      format: "MM/DD/YYYY"
+    });
+  });
+</script>
 
-    {% endblock %}
-  </section>
+{% endblock %}
+</section>
 </section>

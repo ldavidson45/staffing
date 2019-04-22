@@ -118,14 +118,18 @@
   margin-bottom: 0.3rem;
 }
 
+.form__input {
+  margin-bottom: 1rem;
+}
+
 .form__input input {
   display: block;
-  width: 100%;
+  width: 90%;
   border: none;
   height: 1.5rem;
   border: #475153 solid 0.02rem;
   font-size: 0.9rem;
-  padding: 0.3rem;
+  padding: 2% 5%;
 }
 
 .form__container {
@@ -135,24 +139,29 @@
   height: 100vh;
 }
 
+.form__button-container {
+  margin-top: 2rem;
+}
+
 .form__button {
-  margin: 1rem auto;
   background-color: #475153;
   font-size: 1.2rem;
   font-family: "Roboto", sans-serif;
   color: white;
-  padding: 0.5rem;
-  width: 50%;
+  height: calc(2.25rem + 2px);
+  width: 100%;
+  margin: 0 auto;
 }
 
 .form__link {
   text-align: center;
   color: #ee6352;
   text-decoration: none;
+  margin-top: 1rem;
 }
 
 .form__dark {
-  background: rgba(109, 109, 109, 0.5);
+  background: #8f8f8f;
   width: 20rem;
   margin: 2rem auto auto auto;
   padding: 2rem;
@@ -174,5 +183,40 @@
 
 .form__dark h5 {
   margin-bottom: 2rem;
+}
+
+.employee__heading {
+  background: #dbdbdb;
+  padding: 1rem;
+}
+
+.employee__heading h2 {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.employee__heading p {
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  margin: 0;
+}
+
+.employee__container {
+  width: 50rem;
+  margin: 1rem auto;
+}
+
+.employee__link a {
+  font-size: 1rem;
+  color: #1f3a93;
+}
+
+.employee__title {
+  margin: 1rem 0;
+  color: #ee6352;
+}
+
+.form__select select {
+  height: calc(2.25rem + 2px);
 }
 /*# sourceMappingURL=main.css.map */

@@ -119,14 +119,16 @@ $body-font: "Roboto", sans-serif;
 }
 
 .form__input {
+  margin-bottom: 1rem;
+
   input {
     display: block;
-    width: 100%;
+    width: 90%;
     border: none;
     height: 1.5rem;
     border: $base-background solid 0.02rem;
     font-size: 0.9rem;
-    padding: 0.3rem;
+    padding: 2% 5%;
   }
 }
 
@@ -136,25 +138,28 @@ $body-font: "Roboto", sans-serif;
   background-size: cover;
   height: 100vh;
 }
-
+.form__button-container {
+  margin-top: 2rem;
+}
 .form__button {
-  margin: 1rem auto;
   background-color: $base-background;
   font-size: 1.2rem;
   font-family: $body-font;
   color: white;
-  padding: 0.5rem;
-  width: 50%;
+  height: calc(2.25rem + 2px);
+  width: 100%;
+  margin: 0 auto;
 }
 
 .form__link {
   text-align: center;
   color: $red-accent;
   text-decoration: none;
+  margin-top: 1rem;
 }
 
 .form__dark {
-  background: rgba(109, 109, 109, 0.5);
+  background: #8f8f8f;
   width: 20rem;
   margin: 2rem auto auto auto;
   padding: 2rem;
@@ -168,5 +173,42 @@ $body-font: "Roboto", sans-serif;
   }
   h5 {
     margin-bottom: 2rem;
+  }
+}
+
+// Employee Detail page
+
+.employee__heading {
+  background: #dbdbdb;
+  padding: 1rem;
+  h2 {
+    font-family: $body-font;
+    margin: 0;
+  }
+  p {
+    font-family: $body-font;
+    font-style: italic;
+    margin: 0;
+  }
+}
+
+.employee__container {
+  width: 50rem;
+  margin: 1rem auto;
+}
+
+.employee__link a {
+  font-size: 1rem;
+  color: #1f3a93;
+}
+
+.employee__title {
+  margin: 1rem 0;
+  color: $red-accent;
+}
+
+.form__select {
+  select {
+    height: calc(2.25rem + 2px);
   }
 }
