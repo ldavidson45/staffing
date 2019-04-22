@@ -133,7 +133,7 @@ class Home_View(LoginRequiredMixin, View):
     redirect_field_name = 'redirect_to'
     def get(self, request, *args, **kwargs):
         company = self.request.user.profile.company
-        roles = Role_Type.objects.filter(company=company).annotate(count = Count('employees')).order_by('-count')
+        roles = Role_Log.objects.filter(end_date=None, company=company).annotate(count = Count('role_type'))
         return render(request, 'chart.html', {'roles': roles})
 
 class ChartData(APIView):
