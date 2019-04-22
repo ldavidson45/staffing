@@ -31,6 +31,8 @@
       <tr class="thead-light">
         <th>Name</th>
         <th>Last Role</th>
+        <th>Start Date</th>
+        <th>End Date</th>
       </tr>
       {% for employee in inactive %}
       <tr>
@@ -38,6 +40,9 @@
           <a href="/employee/{{ employee.pk }}">{{ employee.name }}</a>
         </td>
         <td>{{ employee.role }}</td>
+        <td>{{ employee.start_date }}</td>
+        <td>{{ employee.end_date }}</td>
+
       </tr>
       {% endfor %}
     </table>
