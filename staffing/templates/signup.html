@@ -9,6 +9,7 @@
   </head>
   <body class="signup">
     <form class="signup__form" action="{% url 'signup' %}" method="post">
+        {% csrf_token %}
       <h1 class="signup__title">Staffing Tracker Signup</h1>
       {% for field in form.visible_fields %}
       <div>

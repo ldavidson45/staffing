@@ -1,23 +1,25 @@
-{% comment %} {% extends "base.html" %} {% block content %}  {% endcomment %}
-{% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
-{% endif %}
-
-<html class="login-bg">
-
-<link href="/static/css/login.css" rel="stylesheet"/>
-
-<h1 class="brand">TrACKR<h1>
-
-<form method="post" action="{% url 'login' %}">
-<h2>Login</h2>
-  {% csrf_token %}
-  {{ form.as_p }}
-
-  <input type="submit" value="login" />
-  <br>
-  <a href="/signup/">Or Sign Up as New User<a>
-</form>
-
-
-{% comment %} {% endblock %} {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login</title>
+    <link href="/static/css/main.css" rel="stylesheet" />
+  </head>
+  <body class="signup">
+    <form class="signup__form" method="post">
+        {% csrf_token %}
+      <h1 class="signup__title">Staffing Tracker Login</h1>
+      {% for field in form.visible_fields %}
+      <div>
+        <p class="form__label">{{ field.label_tag }}</p>
+        <div class="form__input">{{ field }}</div>
+        
+      </div>
+      {% endfor %}
+      <button class="form__button" type="submit">Submit</button>
+      <a class="form__link" href="/login/">Or Create A New Account<a>
+    </form>
+  </body>
+</html>
