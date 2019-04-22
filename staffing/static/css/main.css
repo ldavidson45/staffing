@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans|Roboto|Ubuntu+Mono");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .nav {
   background: #475153;
   position: fixed;
@@ -93,7 +98,7 @@
 .form {
   background: rgba(255, 255, 255, 0.88);
   width: 20rem;
-  margin: 2rem auto auto auto;
+  margin: 0 auto;
   padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -124,7 +129,7 @@
 
 .form__input input {
   display: block;
-  width: 90%;
+  width: 100%;
   border: none;
   height: 1.5rem;
   border: #475153 solid 0.02rem;
@@ -137,6 +142,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  margin: 0;
+  padding: 2rem;
 }
 
 .form__button-container {
@@ -235,12 +242,6 @@
 
 .form-horizontal .table__heading {
   margin: 0 1rem 0 0;
-}
-
-.form-horizontal form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .form-horizontal .form__button {
