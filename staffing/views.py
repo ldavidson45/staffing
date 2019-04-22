@@ -138,6 +138,5 @@ class ChartData(APIView):
         data = {
             "labels": labels,
             "datasets": datasets
-
         }
         return Response(data)

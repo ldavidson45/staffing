@@ -1,24 +1,23 @@
-<html class="signup-bg">
-
-<link href="/static/css/signup.css" rel="stylesheet"/>
-
-
-{% load static %}
-
-<div class="wrapper">
-<h1 class="brand">TrACKR<h1>
-<form action="{% url 'signup' %}" method="post" >
-  {% csrf_token %}
-<h2>Sign up</h2>
-    {% for field in form.visible_fields %}
-    {{field.label_tag}}
-    {{ field }}
-    {% endfor %}
-  </ul>
- 
-  <button type="submit">Submit</button>
-  <a href="/login/">Or Login as Exisiting User<a>
-</form>
-
-</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Signup</title>
+    <link href="/static/css/main.css" rel="stylesheet" />
+  </head>
+  <body class="signup">
+    <form class="signup__form" action="{% url 'signup' %}" method="post">
+      <h1 class="signup__title">Staffing Tracker Signup</h1>
+      {% for field in form.visible_fields %}
+      <div>
+        <p class="form__label">{{ field.label_tag }}</p>
+        {{ field }}
+      </div>
+      {% endfor %}
+      <button type="submit">Submit</button>
+      <a href="/login/">Or Login as Exisiting User<a>
+    </form>
+  </body>
 </html>

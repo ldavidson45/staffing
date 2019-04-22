@@ -43,9 +43,11 @@
 </script>
 
 {% block content %}
+
 <h1 class="dashboard__heading">{{ user.profile.company }}</h1>
 <h5 class="dashboard__chart-title">Monthly Staff Makeup</h5>
 <div class="dashboard__chart-container">
   <canvas id="myChart" aria-label="Staff Makeup Per Month" role="img"></canvas>
 </div>
+
 {% endblock content %}

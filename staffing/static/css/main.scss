@@ -88,3 +88,31 @@ $body-font: "Roboto", sans-serif;
 .dashboard__chart-container {
   height: 2rem;
 }
+
+// signup form
+
+.signup__form {
+  background: rgba(255, 255, 255, 0.88);
+  width: 20rem;
+  margin: 2rem auto auto auto;
+  padding: 2rem;
+  display: block;
+}
+.signup__title {
+  font-size: 2rem;
+  font-family: $heading-font;
+  text-align: center;
+  color: $red-accent;
+}
+
+.form__label {
+  text-transform: uppercase;
+  font-family: $body-font;
+}
+
+.signup {
+  background-image: url("../images/Subtle-Prism.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}

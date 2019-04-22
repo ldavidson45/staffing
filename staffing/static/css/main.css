@@ -84,4 +84,31 @@
 .dashboard__chart-container {
   height: 2rem;
 }
+
+.signup__form {
+  background: rgba(255, 255, 255, 0.88);
+  width: 20rem;
+  margin: 2rem auto auto auto;
+  padding: 2rem;
+  display: block;
+}
+
+.signup__title {
+  font-size: 2rem;
+  font-family: "Ubuntu Mono", monospace;
+  text-align: center;
+  color: #ee6352;
+}
+
+.form__label {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+}
+
+.signup {
+  background-image: url("../images/Subtle-Prism.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
 /*# sourceMappingURL=main.css.map */
