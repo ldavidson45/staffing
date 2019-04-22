@@ -247,4 +247,10 @@
 .form-horizontal .form__button {
   margin-left: 0.5rem;
 }
+
+.form-horizontal form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=main.css.map */

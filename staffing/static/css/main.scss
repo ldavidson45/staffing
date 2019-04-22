@@ -107,6 +107,7 @@ $body-font: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
 }
+
 .form__title {
   font-size: 2rem;
   font-family: $heading-font;
@@ -230,5 +231,9 @@ $body-font: "Roboto", sans-serif;
 
   .form__button {
     margin-left: 0.5rem;
+  }
+
+  form {
+    display: flex;
   }
 }
