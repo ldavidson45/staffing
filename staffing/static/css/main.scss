@@ -152,3 +152,21 @@ $body-font: "Roboto", sans-serif;
   color: $red-accent;
   text-decoration: none;
 }
+
+.form__dark {
+  background: rgba(109, 109, 109, 0.5);
+  width: 20rem;
+  margin: 2rem auto auto auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  input,
+  select {
+    height: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  h5 {
+    margin-bottom: 2rem;
+  }
+}

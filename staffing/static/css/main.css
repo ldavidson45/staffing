@@ -150,4 +150,29 @@
   color: #ee6352;
   text-decoration: none;
 }
+
+.form__dark {
+  background: rgba(109, 109, 109, 0.5);
+  width: 20rem;
+  margin: 2rem auto auto auto;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__dark input,
+.form__dark select {
+  height: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.form__dark h5 {
+  margin-bottom: 2rem;
+}
 /*# sourceMappingURL=main.css.map */
